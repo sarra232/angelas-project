@@ -1,22 +1,39 @@
 name: Deploy Academic Portfolio to GitHub Pages
 
 on:
+  # Despliegue automático ante commits / push directos a master o main
   push:
     branches:
       - master
       - main
+
+  # Verificación y compilación automática en Pull Requests hacia master o main
+  pull_request:
+    branches:
+      - master
+      - main
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - closed
+
+  # Permite ejecución manual desde la pestaña Actions en GitHub
   workflow_dispatch:
 
+# Permisos requeridos para desplegar en GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Permite una sola implementación simultánea para evitar conflictos
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
+  # Trabajo 1: Compilación y validación del sitio web
   build:
     runs-on: ubuntu-latest
     steps:
@@ -39,11 +56,18 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Upload Artifact
+        # Sube el artefacto listo para desplegar
         uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
 
+  # Trabajo 2: Despliegue en GitHub Pages
   deploy:
+    # Se ejecuta en pushes a master/main o cuando un PR es cerrado y mergeado a master/main
+    if: |
+      github.event_name == 'push' || 
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
