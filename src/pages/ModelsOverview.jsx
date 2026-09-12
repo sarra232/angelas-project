@@ -1,98 +1,98 @@
-import React from 'react';
-import PageHeader from '../components/PageHeader';
-import { Award, Layers, CheckCircle2, ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
 
-export default function ModelsOverview({ onNavigate }) {
-  const { modelsOverview } = portfolioData;
+export default function ModelsOverview() {
+  const { modelsPage } = portfolioData;
+  const [activeTab, setActiveTab] = useState('models'); // 'models', 'resources'
 
   return (
-    <div>
-      <PageHeader
-        category="Página 2"
-        badge="Marco Teórico"
-        title="Modelos de Evaluación y RED"
-        description={modelsOverview.subtitle}
-      />
+    <div className="wix-page-section">
+      <div className="wix-section-header">
+        <span className="wix-section-badge">{modelsPage.kicker}</span>
+        <h2 className="wix-section-title">{modelsPage.title}</h2>
+        <p className="wix-section-lead">{modelsPage.lead}</p>
+      </div>
 
-      {/* Subnavegación rápida */}
-      <div className="subnav-container">
-        <button className="subnav-pill active" onClick={() => onNavigate('models')}>
-          Visión General
+      {/* Pestañas Subnavegación estilo Wix */}
+      <div className="wix-subtabs">
+        <button 
+          className={`wix-subtab-btn ${activeTab === 'models' ? 'active' : ''}`}
+          onClick={() => setActiveTab('models')}
+        >
+          2.1 Modelos de Evaluación
         </button>
-        <button className="subnav-pill" onClick={() => onNavigate('models-selection')}>
-          2.1 Seleccionando modelos
-        </button>
-        <button className="subnav-pill" onClick={() => onNavigate('models-resources')}>
-          2.2 Recursos educativos digitales
+        <button 
+          className={`wix-subtab-btn ${activeTab === 'resources' ? 'active' : ''}`}
+          onClick={() => setActiveTab('resources')}
+        >
+          2.2 Recursos Educativos Digitales
         </button>
       </div>
 
-      <div className="academic-callout">
-        <strong>Importancia de la Evaluación de Calidad:</strong> {modelsOverview.calloutText}
-      </div>
-
-      <div className="card-grid">
-        <div className="academic-card">
-          <div className="card-icon-wrapper">
-            <Award size={22} />
+      {/* PESTAÑA 2.1: SELECCIONANDO MODELOS (LOS 6 MODELOS) */}
+      {activeTab === 'models' && (
+        <div>
+          <div className="wix-grid-3">
+            {modelsPage.models.map((model) => (
+              <div key={model.id} className="wix-card">
+                <span className="wix-card-pill">{model.pill}</span>
+                <h3>{model.name}</h3>
+                <p><strong>Descripción:</strong> {model.description}</p>
+                <p><strong>Criterios:</strong> {model.criterios}</p>
+                <p><strong>Métrica:</strong> {model.metrica}</p>
+                <p><strong>Metodología:</strong> {model.metodologia}</p>
+                <p><strong>Instrumento:</strong> {model.instrumento}</p>
+              </div>
+            ))}
           </div>
-          <h3 className="card-heading">Subpágina 2.1: Seleccionando Modelos</h3>
-          <p className="card-body-text">
-            Análisis comparativo entre modelos de evaluación de calidad de software y de objetos de aprendizaje (LORI, McCall, COdA, FURPS). Justificación de la adopción de LORI.
-          </p>
-          <button 
-            className="card-action-btn"
-            onClick={() => onNavigate('models-selection')}
-          >
-            Ir a Selección de Modelos <ArrowRight size={15} />
-          </button>
-        </div>
 
-        <div className="academic-card">
-          <div className="card-icon-wrapper">
-            <Layers size={22} />
+          <div className="wix-quote-box">
+            <strong>Lectura comparativa:</strong> {modelsPage.quote.replace('Lectura comparativa: ', '')}
           </div>
-          <h3 className="card-heading">Subpágina 2.2: Recursos Educativos Digitales</h3>
-          <p className="card-body-text">
-            Conceptualización, características didácticas esenciales (reusabilidad, interoperabilidad, accesibilidad) y catálogo de los 3 RED objeto de evaluación.
-          </p>
-          <button 
-            className="card-action-btn"
-            onClick={() => onNavigate('models-resources')}
-          >
-            Ir a Recursos Educativos <ArrowRight size={15} />
-          </button>
         </div>
-      </div>
+      )}
 
-      <section style={{ marginTop: '2rem' }}>
-        <h2 className="section-title">
-          <CheckCircle2 size={20} color="#1d4ed8" />
-          Dimensiones Clave de Evaluación en RED
-        </h2>
+      {/* PESTAÑA 2.2: RECURSOS EDUCATIVOS DIGITALES */}
+      {activeTab === 'resources' && (
+        <div>
+          <div className="wix-card" style={{ marginBottom: '20px' }}>
+            <span className="wix-card-pill">{modelsPage.resourcesSection.pill}</span>
+            <h3>{modelsPage.resourcesSection.title}</h3>
+            <p>{modelsPage.resourcesSection.description}</p>
 
-        <div className="table-container">
-          <table className="academic-table">
-            <thead>
-              <tr>
-                <th>Dimensión</th>
-                <th>Criterios Evaluados</th>
-                <th>Impacto en el Proceso de Aprendizaje</th>
-              </tr>
-            </thead>
-            <tbody>
-              {modelsOverview.dimensions.map((dim) => (
-                <tr key={dim.id}>
-                  <td><strong>{dim.name}</strong></td>
-                  <td>{dim.criteria}</td>
-                  <td>{dim.impact}</td>
-                </tr>
+            <div className="wix-taglist">
+              {modelsPage.resourcesSection.tags.map((tag, idx) => (
+                <span key={idx} className="wix-tag">{tag}</span>
               ))}
-            </tbody>
-          </table>
+            </div>
+
+            <p style={{ fontSize: '13px', color: 'var(--text-light)', marginTop: '16px' }}>
+              {modelsPage.resourcesSection.note}
+            </p>
+          </div>
+
+          <div className="wix-card">
+            <h3>Fuentes web consultadas</h3>
+            <p style={{ fontSize: '13.5px', color: 'var(--text-muted)' }}>
+              La revisión se contrastó con documentación sobre LORI, la Norma UNE 71362, COdA, Galvis, FURPS y las dimensiones pedagógicas de Reeves. Estas fuentes se utilizaron para precisar criterios, escalas, metodología e instrumentos.
+            </p>
+            <div style={{ marginTop: '12px' }}>
+              {modelsPage.resourcesSection.webSources.map((source, idx) => (
+                <p key={idx} style={{ margin: '6px 0' }}>
+                  <a 
+                    href={source.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{ fontWeight: 'bold' }}
+                  >
+                    • {source.name}
+                  </a>
+                </p>
+              ))}
+            </div>
+          </div>
         </div>
-      </section>
+      )}
     </div>
   );
 }

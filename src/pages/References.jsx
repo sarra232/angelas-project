@@ -1,87 +1,49 @@
 import React from 'react';
-import PageHeader from '../components/PageHeader';
-import { Bookmark, ExternalLink, BookCheck } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export default function References() {
-  const { references } = portfolioData;
+  const { referencesPage } = portfolioData;
 
   return (
-    <div>
-      <PageHeader
-        category="Página 5"
-        badge="Bibliografía"
-        title="Referencias Bibliográficas"
-        description="Fuentes académicas, normativas y literatura especializada citadas bajo la norma APA 7.ª edición."
-      />
-
-      <div className="academic-callout">
-        <strong>Normas APA 7.ª Edición:</strong> Las referencias listadas a continuación sustentan teórica y metodológicamente 
-        el estudio de los Recursos Educativos Digitales y los modelos de evaluación de calidad de software educativo implementados.
+    <div className="wix-page-section">
+      <div className="wix-section-header">
+        <span className="wix-section-badge">{referencesPage.kicker}</span>
+        <h2 className="wix-section-title">{referencesPage.title}</h2>
+        <p className="wix-section-lead">{referencesPage.lead}</p>
       </div>
 
-      <section>
-        <h2 className="section-title">
-          <Bookmark size={20} color="#1d4ed8" />
-          Listado de Referencias Bibliográficas
-        </h2>
+      <div className="wix-card" style={{ marginBottom: '20px' }}>
+        <p className="wix-ref-item">
+          Cova, Á., Arrieta, X., & Aular de Durán, J. (2008). <em>Revisión de modelos para evaluación de software educativos</em>. Revista Electrónica de Estudios Telemáticos, 7(1), 93–114.
+        </p>
+        <p className="wix-ref-item">
+          Pinto, M., Gómez-Camarero, C., & Fernández-Ramos, A. (2012). <em>Los recursos educativos electrónicos: perspectivas y herramientas de evaluación</em>. Perspectivas em Ciência da Informação, 17(3), 82–99.
+        </p>
+        <p className="wix-ref-item">
+          Chinchilla, Z. (2016). <em>Recursos Educativos Digitales</em>. Universidad de Santander (CVUDES), Libro Electrónico Multimedial.
+        </p>
+        <p style={{ fontSize: '13px', color: 'var(--text-light)', marginTop: '16px' }}>
+          {referencesPage.note}
+        </p>
+      </div>
 
-        <div>
-          {references.map((ref) => (
-            <div key={ref.id} className="reference-item">
-              <div className="reference-number">{ref.id}</div>
-              <div style={{ flex: 1 }}>
-                <p className="reference-text">
-                  <strong>{ref.author}</strong> ({ref.year}). <em>{ref.title}</em> {ref.source}
-                </p>
-                <div className="reference-meta" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.4rem' }}>
-                  <span className="tag tag-gray">{ref.category}</span>
-                  {ref.link && (
-                    <a 
-                      href={ref.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      style={{ fontSize: '0.8rem', display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}
-                    >
-                      Ver Fuente <ExternalLink size={12} />
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
+      <div className="wix-card">
+        <h3>Enlaces de apoyo</h3>
+        <div style={{ marginTop: '10px' }}>
+          {referencesPage.supportLinks.map((link, idx) => (
+            <p key={idx} style={{ margin: '6px 0' }}>
+              <a 
+                href={link.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ fontWeight: 'bold' }}
+              >
+                • {link.name}
+              </a>
+            </p>
           ))}
         </div>
-      </section>
-
-      <section style={{ marginTop: '2.5rem' }}>
-        <h2 className="section-title">
-          <BookCheck size={20} color="#1d4ed8" />
-          Bases de Datos y Repositorios Académicos Consultados
-        </h2>
-
-        <div className="card-grid">
-          <div className="academic-card">
-            <h3 className="card-heading">Portal Colombia Aprende</h3>
-            <p className="card-body-text">
-              Repositorio de contenidos y Objetos Virtuales de Aprendizaje (OVA) del Ministerio de Educación Nacional de Colombia.
-            </p>
-          </div>
-
-          <div className="academic-card">
-            <h3 className="card-heading">PhET Interactive Simulations</h3>
-            <p className="card-body-text">
-              Simulaciones interactivas de ciencias y matemáticas desarrolladas por la Universidad de Colorado Boulder.
-            </p>
-          </div>
-
-          <div className="academic-card">
-            <h3 className="card-heading">IEEE Xplore / Dialnet / SciELO</h3>
-            <p className="card-body-text">
-              Bases de datos bibliográficas indexadas para artículos científicos en evaluación de software y tecnología educativa.
-            </p>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 }

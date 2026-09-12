@@ -1,35 +1,17 @@
 import React from 'react';
 
-export default function Footer({ onNavigate }) {
+export default function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer-content">
-        <div>
-          <p style={{ fontWeight: 600, color: 'var(--text-primary)' }}>
-            Portafolio Académico Digital
-          </p>
-          <p style={{ fontSize: '0.8rem', marginTop: '0.2rem' }}>
-            Modelos de Evaluación de Calidad de Software y Recursos Educativos Digitales (RED)
-          </p>
-        </div>
-        <div className="footer-links">
-          <a href="#top" onClick={(e) => { e.preventDefault(); onNavigate('home'); }}>
-            Inicio
-          </a>
-          <a href="#models" onClick={(e) => { e.preventDefault(); onNavigate('models'); }}>
-            Modelos
-          </a>
-          <a href="#redesign" onClick={(e) => { e.preventDefault(); onNavigate('redesign'); }}>
-            Rediseño
-          </a>
-          <a href="#evaluation" onClick={(e) => { e.preventDefault(); onNavigate('evaluation'); }}>
-            Evaluación
-          </a>
-          <a href="#references" onClick={(e) => { e.preventDefault(); onNavigate('references'); }}>
-            Referencias
-          </a>
-        </div>
-      </div>
+    <footer className="wix-footer">
+      <p>
+        <strong>Portafolio Académico Digital · Evaluación de Recursos Educativos Digitales</strong>
+      </p>
+      <p style={{ color: '#93c5fd', fontSize: '12.5px' }}>
+        Universidad de Santander (UDES) · Campus Virtual CVUDES · Maestría en Recursos Digitales Aplicados a la Educación
+      </p>
+      <p style={{ color: '#94a3b8', fontSize: '12px', marginTop: '10px' }}>
+        © 2026 Bajo licencia Creative Commons | San Pedro / Bucaramanga, Colombia
+      </p>
     </footer>
   );
 }
