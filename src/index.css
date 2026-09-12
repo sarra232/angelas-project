@@ -706,24 +706,189 @@ a:hover {
 }
 
 /* ==========================================================================
-   13. Pie de Página Institucional (Manizales, Colombia)
+   13. Pie de Página Institucional (Espacioso, multialineado y con fuentes variadas)
    ========================================================================== */
 .wix-footer {
   background: var(--wix-navy);
   color: #cbd5e1;
+  padding: 38px 24px 22px;
+  border-top: 3.5px solid var(--wix-teal);
+  margin-top: 40px;
+}
+
+.wix-footer-container {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Columna Izquierda: Institución (alineada a la izquierda, misma fuente y color uniforme) */
+.wix-footer-left {
+  text-align: left;
+  font-family: Arial, 'Segoe UI', Tahoma, sans-serif;
+  color: #e2e8f0;
+}
+
+.wix-footer-inst-title {
+  font-family: inherit;
+  color: #e2e8f0;
+  font-size: 13.5px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  margin-bottom: 5px;
+}
+
+.wix-footer-campus {
+  font-family: inherit;
+  color: #e2e8f0;
+  font-size: 12.5px;
+  margin-bottom: 4px;
+}
+
+.wix-footer-program {
+  font-family: inherit;
+  font-style: normal;
+  color: #e2e8f0;
+  font-size: 12.5px;
+  line-height: 1.45;
+  margin-bottom: 4px;
+}
+
+.wix-footer-module {
+  font-family: inherit;
+  color: #e2e8f0;
+  font-size: 12.5px;
+  margin: 0;
+}
+
+/* Columna Central: Portafolio y Autores (centrada y desfasada hacia abajo) */
+.wix-footer-center {
   text-align: center;
-  padding: 20px 16px;
-  font-size: 12px;
-  border-top: 3px solid var(--wix-teal);
-  margin-top: auto;
+  padding: 0 10px;
+  margin-top: 22px;
 }
 
-.wix-footer p {
-  margin: 3px 0;
+.wix-footer-badge {
+  display: inline-block;
+  font-family: 'Courier New', Courier, monospace;
+  background: #1e3a5f;
+  border: 1px solid #3b82f6;
+  color: #fde047;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  padding: 3px 10px;
+  border-radius: 2px;
+  margin-bottom: 8px;
 }
 
-.wix-footer strong {
+.wix-footer-authors-box {
+  margin-bottom: 6px;
+}
+
+.wix-footer-role-label {
+  display: block;
+  font-family: 'Lucida Sans', 'Lucida Grande', sans-serif;
+  font-size: 11px;
+  color: #a5b4fc;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.wix-footer-author-name {
+  font-family: Georgia, 'Times New Roman', serif;
   color: #ffffff;
+  font-size: 12.8px;
+  font-weight: bold;
+  margin: 1px 0;
+}
+
+.wix-footer-tutor {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 11.8px;
+  color: #cbd5e1;
+  margin-top: 5px;
+}
+
+.wix-footer-tutor strong {
+  color: #38bdf8;
+}
+
+/* Columna Derecha: Ubicación y Datos Técnicos (alineada a la derecha) */
+.wix-footer-right {
+  text-align: right;
+}
+
+.wix-footer-city-title {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.wix-footer-year-tag {
+  display: inline-block;
+  font-family: 'Lucida Console', Monaco, monospace;
+  background: #134e4a;
+  border: 1px solid #14b8a6;
+  color: #6ee7b7;
+  font-size: 10.5px;
+  font-weight: bold;
+  padding: 2px 7px;
+  border-radius: 2px;
+  margin-bottom: 6px;
+}
+
+.wix-footer-detail {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 11.5px;
+  color: #94a3b8;
+  margin-bottom: 3px;
+}
+
+.wix-footer-method {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: 11.5px;
+  color: #bfdbfe;
+  margin: 0;
+}
+
+/* Franja Inferior con Separación */
+.wix-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-top: 26px;
+  padding-top: 14px;
+}
+
+.wix-footer-bottom-inner {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.wix-footer-cc-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0;
+  text-align: left;
+}
+
+.wix-footer-sede-text {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 11.5px;
+  color: #cbd5e1;
+  margin: 0;
+  text-align: right;
 }
 
 /* ==========================================================================
@@ -732,6 +897,31 @@ a:hover {
 @media (max-width: 820px) {
   .wix-grid-3 {
     grid-template-columns: 1fr;
+  }
+
+  .wix-footer-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .wix-footer-left,
+  .wix-footer-center,
+  .wix-footer-right {
+    text-align: center;
+  }
+
+  .wix-footer-center {
+    margin-top: 0;
+  }
+
+  .wix-footer-bottom-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .wix-footer-cc-text,
+  .wix-footer-sede-text {
+    text-align: center;
   }
   
   .wix-main-container {
