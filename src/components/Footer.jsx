@@ -10,7 +10,7 @@ export default function Footer() {
         Universidad de Santander (UDES) · Campus Virtual CVUDES · Maestría en Recursos Digitales Aplicados a la Educación
       </p>
       <p style={{ color: '#94a3b8', fontSize: '12px', marginTop: '10px' }}>
-        © 2026 Bajo licencia Creative Commons | San Pedro / Bucaramanga, Colombia
+        © 2026 Bajo licencia Creative Commons | Manizales, Colombia
       </p>
     </footer>
   );
