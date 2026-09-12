@@ -22,21 +22,20 @@ export default function References() {
         <p className="wix-ref-item">
           Chinchilla, Z. (2016). <em>Recursos Educativos Digitales</em>. Universidad de Santander (CVUDES), Libro Electrónico Multimedial.
         </p>
-        <p style={{ fontSize: '13px', color: 'var(--text-light)', marginTop: '16px' }}>
+        <p className="wix-note-text" style={{ marginTop: '14px' }}>
           {referencesPage.note}
         </p>
       </div>
 
       <div className="wix-card">
-        <h3>Enlaces de apoyo</h3>
-        <div style={{ marginTop: '10px' }}>
+        <h3 className="wix-card-title">Enlaces de apoyo</h3>
+        <div className="wix-sources-links">
           {referencesPage.supportLinks.map((link, idx) => (
-            <p key={idx} style={{ margin: '6px 0' }}>
+            <p key={idx} className="wix-source-link-item">
               <a 
                 href={link.url} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                style={{ fontWeight: 'bold' }}
               >
                 • {link.name}
               </a>

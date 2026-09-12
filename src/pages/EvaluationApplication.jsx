@@ -13,9 +13,9 @@ export default function EvaluationApplication() {
       </div>
 
       {/* Tabla del Instrumento de Evaluación */}
-      <div className="wix-card" style={{ marginBottom: '25px' }}>
-        <h3>Instrumento de valoración</h3>
-        <p style={{ color: 'var(--text-light)', fontSize: '13px', marginBottom: '15px' }}>
+      <div className="wix-card" style={{ marginBottom: '22px' }}>
+        <h3 className="wix-card-title">Instrumento de valoración</h3>
+        <p className="wix-note-text" style={{ marginBottom: '14px' }}>
           {evaluationPage.scaleNote}
         </p>
 
@@ -23,7 +23,7 @@ export default function EvaluationApplication() {
           <thead>
             <tr>
               <th>Criterio Evaluado</th>
-              <th style={{ width: '120px', textAlign: 'center' }}>Puntuación</th>
+              <th style={{ width: '130px', textAlign: 'center' }}>Puntuación</th>
             </tr>
           </thead>
           <tbody>
@@ -41,16 +41,19 @@ export default function EvaluationApplication() {
 
       {/* Análisis cualitativo */}
       <div className="wix-grid-3">
-        {evaluationPage.analysis.map((item, idx) => (
-          <div key={idx} className="wix-card">
-            <h3>{item.title}</h3>
-            <p>{item.text}</p>
-          </div>
-        ))}
+        {evaluationPage.analysis.map((item, idx) => {
+          const analysisClass = idx === 0 ? 'wix-analysis-fortalezas' : idx === 1 ? 'wix-analysis-mejoras' : 'wix-analysis-decision';
+          return (
+            <div key={idx} className={`wix-card ${analysisClass}`}>
+              <h3 className="wix-card-title">{item.title}</h3>
+              <p>{item.text}</p>
+            </div>
+          );
+        })}
       </div>
 
       {/* Pregunta orientadora */}
-      <div className="wix-quote-box" style={{ marginTop: '25px' }}>
+      <div className="wix-quote-box" style={{ marginTop: '24px' }}>
         <strong>Pregunta orientadora:</strong> {evaluationPage.quote.replace('Pregunta orientadora: ', '')}
       </div>
     </div>

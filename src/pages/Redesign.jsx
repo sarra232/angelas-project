@@ -23,14 +23,17 @@ export default function Redesign() {
       </div>
 
       {/* Matriz de diagnóstico y propuesta */}
-      <div className="wix-grid-3" style={{ marginTop: '30px' }}>
-        {redesignPage.matrix.map((item, idx) => (
-          <div key={idx} className="wix-card">
-            <span className="wix-card-pill">{item.pill}</span>
-            <h3>{item.title}</h3>
-            <p>{item.text}</p>
-          </div>
-        ))}
+      <div className="wix-grid-3" style={{ marginTop: '24px' }}>
+        {redesignPage.matrix.map((item, idx) => {
+          const matrixClass = idx === 0 ? 'wix-matrix-antes' : idx === 1 ? 'wix-matrix-cambio' : 'wix-matrix-despues';
+          return (
+            <div key={idx} className={`wix-card ${matrixClass}`}>
+              <span className="wix-card-pill">{item.pill}</span>
+              <h3 className="wix-card-title">{item.title}</h3>
+              <p>{item.text}</p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
