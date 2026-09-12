@@ -1,0 +1,28 @@
+services:
+  # Servidor estático optimizado de producción (Nginx Alpine)
+  # Acceso en: http://localhost:8085
+  portfolio-web:
+    build:
+      context: .
+      target: production
+    container_name: angelas-portfolio-prod
+    ports:
+      - "${PORT:-8085}:80"
+    restart: unless-stopped
+
+  # Entorno de desarrollo interactivo en vivo con Hot-Reload (Vite)
+  # Acceso en: http://localhost:3030
+  portfolio-dev:
+    build:
+      context: .
+      target: development
+    container_name: angelas-portfolio-dev
+    ports:
+      - "${DEV_PORT:-3030}:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    profiles:
+      - dev
