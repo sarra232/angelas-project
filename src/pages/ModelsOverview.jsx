@@ -55,29 +55,6 @@ export default function ModelsOverview() {
       {/* PESTAÑA 2.2: RECURSOS EDUCATIVOS DIGITALES */}
       {activeTab === 'resources' && (
         <div className="wix-tab-content">
-          {/* Resumen de Relación de Modelos y Criterios */}
-          <div className="wix-card" style={{ marginBottom: '22px' }}>
-            <span className="wix-card-pill">{modelsPage.resourcesSection.pill}</span>
-            <h3 className="wix-card-title">{modelsPage.resourcesSection.title}</h3>
-            <p>{modelsPage.resourcesSection.description}</p>
-
-            {/* Lista de componentes/criterios con tamaños y desalineación manual */}
-            <div className="wix-taglist-human">
-              {modelsPage.resourcesSection.tags.map((tag, idx) => (
-                <span 
-                  key={idx} 
-                  className={`wix-tag-human wix-tag-item-${idx + 1}`}
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            <p className="wix-note-text" style={{ marginTop: '14px' }}>
-              {modelsPage.resourcesSection.note}
-            </p>
-          </div>
-
           {/* Tablas de Caracterización de los RED Seleccionados */}
           {modelsPage.resourcesSection.redItems && modelsPage.resourcesSection.redItems.map((red) => (
             <div key={red.id} className="wix-red-table-container">
