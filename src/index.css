@@ -599,6 +599,81 @@ a:hover {
 }
 
 /* ==========================================================================
+   9.1 Tablas de Caracterización de RED (Subpágina 2.2)
+   ========================================================================== */
+.wix-red-table-container {
+  margin: 22px 0 26px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.wix-red-spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, 'Segoe UI', Tahoma, sans-serif;
+}
+
+.wix-red-table-header {
+  background: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 13.5px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  border: 1px solid #000000;
+  text-transform: uppercase;
+}
+
+.wix-red-label-col {
+  width: 27%;
+  min-width: 170px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #000000;
+  background: #ffffff;
+  border: 1px solid #000000;
+  vertical-align: middle;
+  text-align: right;
+}
+
+.wix-red-value-col {
+  padding: 8px 14px;
+  font-size: 13px;
+  color: #1e293b;
+  background: #ffffff;
+  border: 1px solid #000000;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.wix-table-link {
+  color: #0284c7;
+  text-decoration: underline;
+  word-break: break-all;
+  font-weight: 500;
+}
+
+.wix-table-link:hover {
+  color: #0369a1;
+}
+
+.wix-screenshot-box {
+  margin: 6px 0;
+  text-align: center;
+}
+
+.wix-red-screenshot {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #cbd5e1;
+  display: inline-block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================================
    10. Línea de Tiempo (Rediseño)
    ========================================================================== */
 .wix-timeline {

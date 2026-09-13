@@ -55,7 +55,8 @@ export default function ModelsOverview() {
       {/* PESTAÑA 2.2: RECURSOS EDUCATIVOS DIGITALES */}
       {activeTab === 'resources' && (
         <div className="wix-tab-content">
-          <div className="wix-card" style={{ marginBottom: '20px' }}>
+          {/* Resumen de Relación de Modelos y Criterios */}
+          <div className="wix-card" style={{ marginBottom: '22px' }}>
             <span className="wix-card-pill">{modelsPage.resourcesSection.pill}</span>
             <h3 className="wix-card-title">{modelsPage.resourcesSection.title}</h3>
             <p>{modelsPage.resourcesSection.description}</p>
@@ -77,7 +78,95 @@ export default function ModelsOverview() {
             </p>
           </div>
 
-          <div className="wix-card">
+          {/* Tablas de Caracterización de los RED Seleccionados */}
+          {modelsPage.resourcesSection.redItems && modelsPage.resourcesSection.redItems.map((red) => (
+            <div key={red.id} className="wix-red-table-container">
+              <table className="wix-red-spec-table">
+                <thead>
+                  <tr>
+                    <th colSpan="2" className="wix-red-table-header">
+                      {red.titleHeader}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="wix-red-label-col">RED:</td>
+                    <td className="wix-red-value-col">{red.redName}</td>
+                  </tr>
+                  <tr>
+                    <td className="wix-red-label-col">Área de conocimiento:</td>
+                    <td className="wix-red-value-col">{red.knowledgeArea}</td>
+                  </tr>
+                  <tr>
+                    <td className="wix-red-label-col">Nivel o grado de aplicación:</td>
+                    <td className="wix-red-value-col">{red.applicationLevel}</td>
+                  </tr>
+                  <tr>
+                    <td className="wix-red-label-col">Datos del autor(es):</td>
+                    <td className="wix-red-value-col">{red.authorData}</td>
+                  </tr>
+                  <tr>
+                    <td className="wix-red-label-col">Enlace al repositorio:</td>
+                    <td className="wix-red-value-col">
+                      <a 
+                        href={red.repositoryUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="wix-table-link"
+                      >
+                        {red.repositoryUrl}
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="wix-red-label-col">Enlace al RED:</td>
+                    <td className="wix-red-value-col">
+                      <a 
+                        href={red.redUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="wix-table-link"
+                      >
+                        {red.redUrl}
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="wix-red-label-col">Descripción:</td>
+                    <td className="wix-red-value-col">{red.description}</td>
+                  </tr>
+                  <tr>
+                    <td className="wix-red-label-col">Características y posibilidades de uso:</td>
+                    <td className="wix-red-value-col">{red.featuresAndUses}</td>
+                  </tr>
+                  <tr>
+                    <td className="wix-red-label-col">Limitaciones:</td>
+                    <td className="wix-red-value-col">{red.limitations}</td>
+                  </tr>
+                  <tr>
+                    <td className="wix-red-label-col">Verificación de estándares:</td>
+                    <td className="wix-red-value-col">{red.standardsVerification}</td>
+                  </tr>
+                  <tr>
+                    <td className="wix-red-label-col">Captura de Pantalla:</td>
+                    <td className="wix-red-value-col">
+                      <div className="wix-screenshot-box">
+                        <img 
+                          src={red.screenshotUrl} 
+                          alt={red.screenshotAlt}
+                          className="wix-red-screenshot"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          ))}
+
+          {/* Fuentes consultadas */}
+          <div className="wix-card" style={{ marginTop: '22px' }}>
             <h3 className="wix-card-title">Fuentes web consultadas</h3>
             <p className="wix-card-description">
               La revisión se contrastó con documentación sobre LORI, la Norma UNE 71362, COdA, Galvis, FURPS y las dimensiones pedagógicas de Reeves. Estas fuentes se utilizaron para precisar criterios, escalas, metodología e instrumentos.

@@ -115,6 +115,40 @@ export const portfolioData = {
         "Interoperabilidad",
         "Viabilidad"
       ],
+      redItems: [
+        {
+          id: "red-1",
+          titleHeader: "RECURSO EDUCATIVO DIGITAL 1",
+          redName: "Vocabulary Games, Daily Routine",
+          knowledgeArea: "Lengua Extranjera: Inglés.",
+          applicationLevel: "6°",
+          authorData: "El recurso es desarrollado y administrado por el British Council, organización internacional especializada en educación y enseñanza del inglés.",
+          repositoryUrl: "https://learnenglishteens.britishcouncil.org/",
+          redUrl: "https://learnenglishteens.britishcouncil.org/vocabulary/a1-a2-vocabulary/daily-routine",
+          description: "Es un Recurso Educativo Digital diseñado para facilitar y hacer más llamativo el aprendizaje del inglés como segunda lengua. Contiene herramientas para practicar todas las habilidades del idioma, y además se puede interactuar con personas de todo el mundo.",
+          featuresAndUses: "Entre sus principales características se pueden mencionar la presentación de recursos organizados de acuerdo con diferentes niveles de competencia lingüística, su capacidad para trabajar las cuatro habilidades del idioma (reading, listening, writing y speaking.), la calidad y cantidad de actividades de vocabulario y gramática que a su vez cuentan con videos, audios, textos y ejercicios interactivos. Algunas actividades proporcionan retroalimentación inmediata y permite que los estudiantes desarrollen actividades de manera autónoma.",
+          limitations: "La plataforma ofrece una gran cantidad de materiales, pero no constituye un curso completo con una secuencia obligatoria. Por tal motivo, el docente debe realizar previamente una selección de las actividades que realmente respondan a sus objetivos de aprendizaje. El recurso puede apoyar el aprendizaje autónomo, pero no reemplaza el acompañamiento y la retroalimentación que proporciona el docente. También se debe tener en cuenta que algunas actividades requieren una conexión estable a Internet y dispositivos disponibles para los estudiantes, aspecto que puede representar una dificultad en algunos contextos educativos.",
+          standardsVerification: "Este RED presenta una organización basada en los niveles del Marco Común Europeo de Referencia para las Lenguas (MCER). Esto permite relacionar las actividades con diferentes niveles de dominio del idioma y seleccionar materiales de acuerdo con las competencias que se espera desarrollar. Además, los contenidos están diseñados específicamente para el aprendizaje del inglés como lengua extranjera. Sin embargo, para utilizarlo en el contexto educativo colombiano es necesario realizar una articulación con los Estándares Básicos de Competencias en Lenguas Extranjeras, los Derechos Básicos de Aprendizaje (DBA) y los objetivos establecidos en la planeación institucional. De esta manera, el recurso puede integrarse de forma más pertinente al currículo.",
+          screenshotUrl: "./images/red1-british-council.png",
+          screenshotAlt: "Captura de pantalla RED 1: Daily Routine - British Council LearnEnglish Teens"
+        },
+        {
+          id: "red-2",
+          titleHeader: "RECURSO EDUCATIVO DIGITAL 2",
+          redName: "Irregular Plural Nouns",
+          knowledgeArea: "Lengua Extranjera: Inglés.",
+          applicationLevel: "6°",
+          authorData: "Iniciativa desarrollada por PBS, en colaboración con diferentes organizaciones y productores de contenidos educativos.",
+          repositoryUrl: "https://www.pbslearningmedia.org/",
+          redUrl: "https://www.pbslearningmedia.org/resource/564f9dfd-dcb0-4f32-bfad-bcab1313ae37/irregular-plural-nouns-no-nonsense-grammar/?student=true",
+          description: "Es un Recurso Educativo Digital que ofrece variedad en su contenido, tanto para estudiantes como para docentes. Sus herramientas son didácticas y llamativas Características del RED y posibilidades de uso.",
+          featuresAndUses: "Entre las principales características y posibilidades de uso se pueden destacar su amplia variedad de recursos multimedia y actividades interactivas, su gran cantidad de material diferenciado por edades, grados y áreas de conocimiento, la capacidad de complementar una secuencia didáctica elaborada por el docente, entre otros. En una clase de inglés, por ejemplo, un video puede utilizarse como actividad inicial para contextualizar un tema y posteriormente desarrollar preguntas de comprensión, actividades de vocabulario y una producción oral o escrita.",
+          limitations: "Una de las principales limitaciones es que la plataforma está diseñada principalmente para el contexto educativo estadounidense, por lo que algunos contenidos, ejemplos y referentes culturales pueden no estar directamente relacionados con la realidad de los estudiantes colombianos. Por esta razón, se deben seleccionar cuidadosamente los materiales y realizar actividades de contextualización. Otra dificultad es la gran cantidad de recursos disponibles. Aunque esto representa una ventaja, también puede hacer que la búsqueda y selección del material adecuado tome tiempo. Además, el acceso a algunos contenidos puede depender de una buena conexión a Internet y de dispositivos que permitan reproducir adecuadamente videos o recursos interactivos.",
+          standardsVerification: "Este recurso presenta una fortaleza importante en relación con la organización curricular, ya que permite identificar recursos relacionados con estándares educativos. La plataforma ofrece filtros y herramientas que facilitan la búsqueda de contenidos relacionados con determinados estándares y niveles educativos. Para su utilización en una institución educativa de Colombia es necesario establecer la relación entre el recurso seleccionado y los Estándares Básicos de Competencias en Lenguas Extranjeras, los DBA y los objetivos de aprendizaje definidos por el docente.",
+          screenshotUrl: "./images/red2-pbs-learning.png",
+          screenshotAlt: "Captura de pantalla RED 2: Irregular Plural Nouns - PBS LearningMedia"
+        }
+      ],
       note: "Nota: la infografía adjunta identifica LORI, Reeves, UNE 71362, COdA, FURPS, McCall, Galvis y Boehm. Para esta versión se seleccionaron seis: LORI, Reeves, UNE 71362, COdA, FURPS y Galvis.",
       webSources: [
         {
