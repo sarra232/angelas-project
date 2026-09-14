@@ -53,6 +53,35 @@ export default function ModelsOverview() {
       {/* SUBPÁGINA 2.1: MODELOS DE EVALUACIÓN (LORI 1 y 2, CODA 1 y 2, GALVIS 1 y 2) */}
       {activeTab === 'evaluation-models' && (
         <div className="wix-tab-content">
+          {/* Tabla Comparativa: Ventajas y Desventajas de los Modelos (Antes de los Modelos) */}
+          {modelsPage.subpage21ComparisonTable && (
+            <div className="wix-comparison-table-wrapper" style={{ marginBottom: '36px' }}>
+              <div className="wix-eval-green-banner">
+                • Comparativa de modelos, ventajas vs desventajas
+              </div>
+              <table className="wix-comp-advantages-table">
+                <thead>
+                  <tr>
+                    <th className="wix-comp-th-model">Modelo</th>
+                    <th className="wix-comp-th-adv">Ventajas</th>
+                    <th className="wix-comp-th-disadv">Desventajas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {modelsPage.subpage21ComparisonTable.rows.map((row, rIdx) => (
+                    <tr key={rIdx}>
+                      <td className="wix-comp-td-model">
+                        <strong>{row.model}</strong>
+                      </td>
+                      <td className="wix-comp-td-adv">{row.advantages}</td>
+                      <td className="wix-comp-td-disadv">{row.disadvantages}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+
           {modelsPage.subpage21Models && modelsPage.subpage21Models.map((modelItem) => (
             <div key={modelItem.id} className="wix-detailed-eval-container" style={{ marginBottom: '35px' }}>
               {/* Título de Cabecera del Modelo */}
@@ -199,6 +228,38 @@ export default function ModelsOverview() {
               </div>
             </div>
           ))}
+
+          {/* Sección de Video de Sustentación al final de los modelos */}
+          <div className="wix-eval-section-block wix-multimedia-player-card" style={{ marginTop: '28px', marginBottom: '20px' }}>
+            <div className="wix-eval-green-banner">
+              • Video de Sustentación / Registro de la Evaluación
+            </div>
+            <div className="wix-eval-block-body">
+              <div className="wix-media-box-inner">
+                <div className="wix-media-info">
+                  <h4 style={{ margin: '0 0 6px 0', fontSize: '14.5px', color: '#1e3a8a', fontWeight: 'bold' }}>
+                    🎥 Video Explicativo de los Modelos de Evaluación
+                  </h4>
+                  <p style={{ margin: '0 0 16px 0', fontSize: '13px', color: '#334155', lineHeight: 1.5 }}>
+                    Reproduzca a continuación el video explicativo y sustentación sobre la aplicación de los modelos de evaluación y el análisis de los Recursos Educativos Digitales seleccionados:
+                  </p>
+                </div>
+                <div className="wix-video-player-container">
+                  <video 
+                    controls 
+                    playsInline 
+                    preload="metadata" 
+                    className="wix-video-player"
+                  >
+                    <source src="./video/sustentacion_modelos.mp4" type="video/mp4" />
+                    <source src="./video/WhatsApp Video 2026-09-13 at 22.09.01.mp4" type="video/mp4" />
+                    <source src="./video/WhatsApp%20Video%202026-09-13%20at%2022.09.01.mp4" type="video/mp4" />
+                    Tu navegador no soporta la reproducción directa de este video en formato MP4.
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       )}
 

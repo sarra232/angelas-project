@@ -99,6 +99,29 @@ export const portfolioData = {
 
     quote: "Lectura comparativa: LORI, COdA y UNE 71362 son especialmente apropiados para valorar RED y objetos de aprendizaje; Reeves aporta una mirada pedagógica profunda; FURPS permite examinar la calidad funcional y técnica; y Galvis integra calidad educativa, computacional y viabilidad mediante juicio de expertos y participación de usuarios.",
 
+    // CUADRO COMPARATIVO: VENTAJAS Y DESVENTAJAS
+    subpage21ComparisonTable: {
+      title: "Cuadro Comparativo: Ventajas y Desventajas de los Modelos de Evaluación",
+      columns: ["Modelo", "Ventajas", "Desventajas"],
+      rows: [
+        {
+          model: "Modelo LORI",
+          advantages: "Su principal fortaleza se basa en una evaluación que es cuantitativa, estructurada y estandarizada a través de algunos criterios, lo que facilita el trabajo colaborativo entre desarrolladores y educadores para medir aspectos clave como la reusabilidad, la accesibilidad y la motivación.",
+          disadvantages: "Su mayor desventaja radica en la inflexibilidad de su formato estructurado y en que exige conocimientos informáticos relativamente avanzados por parte del evaluador para calificar aspectos complejos, además de que la opción de marcar criterios como \"No Aplica\" puede sesgar la calificación global final."
+        },
+        {
+          model: "Modelo COdA",
+          advantages: "Destaca por ser una herramienta sumamente accesible, ágil y práctica, específicamente diseñada para que docentes y estudiantes puedan evaluar la calidad pedagógica y tecnológica de los objetos de aprendizaje sin necesidad de contar con competencias informáticas avanzadas.",
+          disadvantages: "Su limitación principal estriba en que su estructura simplificada favorece una mayor subjetividad en la interpretación de los criterios por parte de cada usuario, además de carecer de la profundidad técnica necesaria para analizar exhaustivamente la arquitectura del software."
+        },
+        {
+          model: "Modelo Galvis",
+          advantages: "Su mayor virtud es su enfoque multidimensional amplio, el cual abarca dimensiones pedagógicas, tecnológicas, comunicativas y organizativas que permiten valorar la verdadera pertinencia curricular del recurso y su adaptación a los objetivos de aprendizaje y al perfil del estudiante.",
+          disadvantages: "Su desventaja más notoria es que cuenta con un instrumento extenso cuya aplicación requiere bastante tiempo y un análisis riguroso, sumado a que el resultado de la evaluación depende en gran medida de la mediación del docente y del contexto institucional en el que se aplique."
+        }
+      ]
+    },
+
     // SUBPÁGINA 2.1: MODELOS DE EVALUACIÓN (TABLAS DETALLADAS)
     subpage21Models: [
       {
