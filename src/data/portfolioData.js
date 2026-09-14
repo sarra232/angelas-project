@@ -23,7 +23,7 @@ export const portfolioData = {
       "Daniel Castellanos de Salvador"
     ],
     teacher: "Pedro Antonio Lopez Ramirez",
-    program: "Maestría en Recursos Digitales Aplicados a la Educación",
+    program: "Especialización en Aplicación de TIC para la Enseñanza",
     module: "Evaluación de Recursos Educativos Digitales"
   },
 

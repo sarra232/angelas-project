@@ -9,7 +9,7 @@ export default function Footer() {
           <h4 className="wix-footer-inst-title">UNIVERSIDAD DE SANTANDER — UDES</h4>
           <p className="wix-footer-campus">Campus Virtual CVUDES</p>
           <p className="wix-footer-program">
-            Maestría en Recursos Digitales Aplicados a la Educación
+            Especialización en Aplicación de TIC para la Enseñanza
           </p>
           <p className="wix-footer-module">
             Módulo: Evaluación de Recursos Educativos Digitales

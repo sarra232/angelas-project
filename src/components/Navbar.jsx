@@ -23,7 +23,7 @@ export default function Navbar({ activePage, setActivePage }) {
             />
             <div className="wix-header-text">
               <h1>UNIVERSIDAD DE SANTANDER — UDES</h1>
-              <span>CAMPUS VIRTUAL CVUDES · MAESTRÍA EN RECURSOS DIGITALES</span>
+              <span>CAMPUS VIRTUAL CVUDES · ESPECIALIZACIÓN EN APLICACIÓN DE TIC PARA LA ENSEÑANZA</span>
             </div>
           </div>
         </div>
