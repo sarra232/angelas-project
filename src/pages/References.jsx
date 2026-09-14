@@ -22,26 +22,21 @@ export default function References() {
         <p className="wix-ref-item">
           Chinchilla, Z. (2016). <em>Recursos Educativos Digitales</em>. Universidad de Santander (CVUDES), Libro Electrónico Multimedial.
         </p>
-        <p className="wix-note-text" style={{ marginTop: '14px' }}>
-          {referencesPage.note}
+        <p className="wix-ref-item">
+          Estrada, M. S. (2021). <em>Recursos educativos digitales: Intencionalidad didáctica, pedagógica y diseño</em>. Dialnet. <a href="https://dialnet.unirioja.es/servlet/articulo?codigo=8578131" target="_blank" rel="noopener noreferrer" className="wix-table-link">https://dialnet.unirioja.es/servlet/articulo?codigo=8578131</a>
         </p>
-      </div>
-
-      <div className="wix-card">
-        <h3 className="wix-card-title">Enlaces de apoyo</h3>
-        <div className="wix-sources-links">
-          {referencesPage.supportLinks.map((link, idx) => (
-            <p key={idx} className="wix-source-link-item">
-              <a 
-                href={link.url} 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                • {link.name}
-              </a>
-            </p>
-          ))}
-        </div>
+        <p className="wix-ref-item">
+          OER Commons. (s.f.) <em>OER Commons: Open Educational Resources</em>. Institute for the Study of Knowledge Management in Education (ISKME). <a href="https://www.oercommons.org/oer" target="_blank" rel="noopener noreferrer" className="wix-table-link">https://www.oercommons.org/oer</a>
+        </p>
+        <p className="wix-ref-item">
+          OpenAI. (2026) <em>ChatGPT</em>. <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer" className="wix-table-link">https://chatgpt.com</a> (OpenAI fue utilizado como herramienta de corrección ortográfica y de estilo.)
+        </p>
+        <p className="wix-ref-item">
+          PBS LearningMedia. (s.f.) <em>PBS LearningMedia</em>. Public Broadcasting Service (PBS). <a href="https://www.pbslearningmedia.org/" target="_blank" rel="noopener noreferrer" className="wix-table-link">https://www.pbslearningmedia.org/</a>
+        </p>
+        <p className="wix-ref-item">
+          Salazar Estrada, M. (2021). <em>Recursos educativos digitales. Intencionalidad didáctica, pedagógica y diseño</em>. Luciérnaga Comunicación, 13(25), 87–98. <a href="https://doi.org/10.33571/revistaluciernaga.v13n25a6" target="_blank" rel="noopener noreferrer" className="wix-table-link">https://doi.org/10.33571/revistaluciernaga.v13n25a6</a>
+        </p>
       </div>
     </div>
   );

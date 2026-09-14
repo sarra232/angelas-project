@@ -985,17 +985,31 @@ export const portfolioData = {
       {
         id: 3,
         text: "Chinchilla, Z. (2016). Recursos Educativos Digitales. Universidad de Santander (CVUDES), Libro Electrónico Multimedial."
-      }
-    ],
-    note: "Además, se recomienda incluir aquí las referencias específicas del RED seleccionado, su autor, plataforma, fecha de consulta y cualquier herramienta de IA utilizada durante el rediseño.",
-    supportLinks: [
-      {
-        name: "Wix · Creador de portafolios",
-        url: "https://www.wix.com/portfolio-website"
       },
       {
-        name: "Wix · Plantillas para educación",
-        url: "https://es.wix.com/website/templates/html/education"
+        id: 4,
+        text: "Estrada, M. S. (2021). Recursos educativos digitales: Intencionalidad didáctica, pedagógica y diseño. Dialnet.",
+        url: "https://dialnet.unirioja.es/servlet/articulo?codigo=8578131"
+      },
+      {
+        id: 5,
+        text: "OER Commons. (s.f.) OER Commons: Open Educational Resources. Institute for the Study of Knowledge Management in Education (ISKME).",
+        url: "https://www.oercommons.org/oer"
+      },
+      {
+        id: 6,
+        text: "OpenAI. (2026) ChatGPT. https://chatgpt.com (OpenAI fue utilizado como herramienta de corrección ortográfica y de estilo.)",
+        url: "https://chatgpt.com"
+      },
+      {
+        id: 7,
+        text: "PBS LearningMedia. (s.f.) PBS LearningMedia. Public Broadcasting Service (PBS).",
+        url: "https://www.pbslearningmedia.org/"
+      },
+      {
+        id: 8,
+        text: "Salazar Estrada, M. (2021). Recursos educativos digitales. Intencionalidad didáctica, pedagógica y diseño. Luciérnaga Comunicación, 13(25), 87–98.",
+        url: "https://doi.org/10.33571/revistaluciernaga.v13n25a6"
       }
     ]
   }

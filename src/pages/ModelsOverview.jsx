@@ -28,10 +28,6 @@ export default function ModelsOverview() {
             </div>
           ))}
         </div>
-
-        <div className="wix-quote-box">
-          <strong>Lectura comparativa:</strong> {modelsPage.quote.replace('Lectura comparativa: ', '')}
-        </div>
       </div>
 
       {/* Pestañas Subnavegación estilo Wix */}
@@ -352,27 +348,6 @@ export default function ModelsOverview() {
               </table>
             </div>
           ))}
-
-          {/* Fuentes consultadas */}
-          <div className="wix-card" style={{ marginTop: '22px' }}>
-            <h3 className="wix-card-title">Fuentes web consultadas</h3>
-            <p className="wix-card-description">
-              La revisión se contrastó con documentación sobre LORI, la Norma UNE 71362, COdA, Galvis, FURPS y las dimensiones pedagógicas de Reeves. Estas fuentes se utilizaron para precisar criterios, escalas, metodología e instrumentos.
-            </p>
-            <div className="wix-sources-links">
-              {modelsPage.resourcesSection.webSources.map((source, idx) => (
-                <p key={idx} className="wix-source-link-item">
-                  <a 
-                    href={source.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    • {source.name}
-                  </a>
-                </p>
-              ))}
-            </div>
-          </div>
         </div>
       )}
     </div>
