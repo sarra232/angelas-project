@@ -3,21 +3,42 @@ import { portfolioData } from '../data/portfolioData';
 
 export default function ModelsOverview() {
   const { modelsPage } = portfolioData;
-  const [activeTab, setActiveTab] = useState('models'); // 'models', 'resources'
+  const [activeTab, setActiveTab] = useState('evaluation-models'); // 'evaluation-models' (2.1), 'resources' (2.2)
 
   return (
     <div className="wix-page-section">
+      {/* Encabezado Principal de Página 2 */}
       <div className="wix-section-header">
         <span className="wix-section-badge">{modelsPage.kicker}</span>
         <h2 className="wix-section-title">{modelsPage.title}</h2>
-        <p className="wix-section-lead">{modelsPage.lead}</p>
+      </div>
+
+      {/* Modelos del 1 al 6 en Página 2 (encima de las subpáginas) */}
+      <div className="wix-models-overview-main" style={{ marginBottom: '28px' }}>
+        <div className="wix-grid-3">
+          {modelsPage.models.map((model, idx) => (
+            <div key={model.id} className={`wix-card wix-card-col-${(idx % 6) + 1}`}>
+              <span className="wix-card-pill">{model.pill}</span>
+              <h3 className="wix-card-title">{model.name}</h3>
+              <p><strong>Descripción:</strong> {model.description}</p>
+              <p><strong>Criterios:</strong> {model.criterios}</p>
+              <p><strong>Métrica:</strong> {model.metrica}</p>
+              <p><strong>Metodología:</strong> {model.metodologia}</p>
+              <p><strong>Instrumento:</strong> {model.instrumento}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="wix-quote-box">
+          <strong>Lectura comparativa:</strong> {modelsPage.quote.replace('Lectura comparativa: ', '')}
+        </div>
       </div>
 
       {/* Pestañas Subnavegación estilo Wix */}
       <div className="wix-subtabs">
         <button 
-          className={`wix-subtab-btn ${activeTab === 'models' ? 'active' : ''}`}
-          onClick={() => setActiveTab('models')}
+          className={`wix-subtab-btn ${activeTab === 'evaluation-models' ? 'active' : ''}`}
+          onClick={() => setActiveTab('evaluation-models')}
         >
           2.1 Modelos de Evaluación
         </button>
@@ -29,30 +50,159 @@ export default function ModelsOverview() {
         </button>
       </div>
 
-      {/* PESTAÑA 2.1: SELECCIONANDO MODELOS (LOS 6 MODELOS) */}
-      {activeTab === 'models' && (
+      {/* SUBPÁGINA 2.1: MODELOS DE EVALUACIÓN (LORI 1 y 2, CODA 1 y 2, GALVIS 1 y 2) */}
+      {activeTab === 'evaluation-models' && (
         <div className="wix-tab-content">
-          <div className="wix-grid-3">
-            {modelsPage.models.map((model, idx) => (
-              <div key={model.id} className={`wix-card wix-card-col-${(idx % 6) + 1}`}>
-                <span className="wix-card-pill">{model.pill}</span>
-                <h3 className="wix-card-title">{model.name}</h3>
-                <p><strong>Descripción:</strong> {model.description}</p>
-                <p><strong>Criterios:</strong> {model.criterios}</p>
-                <p><strong>Métrica:</strong> {model.metrica}</p>
-                <p><strong>Metodología:</strong> {model.metodologia}</p>
-                <p><strong>Instrumento:</strong> {model.instrumento}</p>
+          {modelsPage.subpage21Models && modelsPage.subpage21Models.map((modelItem) => (
+            <div key={modelItem.id} className="wix-detailed-eval-container" style={{ marginBottom: '35px' }}>
+              {/* Título de Cabecera del Modelo */}
+              <div className="wix-eval-main-heading">
+                <h4>{modelItem.mainTitle}</h4>
+                {modelItem.subTitle && (
+                  <h5 style={{ margin: '3px 0 0 0', fontSize: '13px', color: '#1e3a8a', fontWeight: 'bold' }}>
+                    {modelItem.subTitle}
+                  </h5>
+                )}
+                <h3>{modelItem.modelName}</h3>
               </div>
-            ))}
-          </div>
 
-          <div className="wix-quote-box">
-            <strong>Lectura comparativa:</strong> {modelsPage.quote.replace('Lectura comparativa: ', '')}
-          </div>
+              {/* 1. Tabla de Metadatos del RED */}
+              <div className="wix-eval-table-wrapper">
+                <table className="wix-meta-table-eval">
+                  <tbody>
+                    <tr>
+                      <td className="wix-meta-blue-label">Nombre del recurso educativo digital:</td>
+                      <td className="wix-meta-white-val">{modelItem.metadata.redName}</td>
+                    </tr>
+                    <tr>
+                      <td className="wix-meta-blue-label">Grado de aplicación:</td>
+                      <td className="wix-meta-white-val">{modelItem.metadata.grade}</td>
+                    </tr>
+                    <tr>
+                      <td className="wix-meta-blue-label">Área de conocimiento:</td>
+                      <td className="wix-meta-white-val">{modelItem.metadata.area}</td>
+                    </tr>
+                    <tr>
+                      <td className="wix-meta-blue-label">Objetivos de aprendizaje:</td>
+                      <td className="wix-meta-white-val">{modelItem.metadata.objectives}</td>
+                    </tr>
+                    <tr>
+                      <td className="wix-meta-blue-label">Nombre del repositorio:</td>
+                      <td className="wix-meta-white-val">{modelItem.metadata.repositoryName}</td>
+                    </tr>
+                    <tr>
+                      <td className="wix-meta-blue-label">URL del recurso educativo digital:</td>
+                      <td className="wix-meta-white-val">
+                        <a 
+                          href={modelItem.metadata.redUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="wix-table-link"
+                        >
+                          {modelItem.metadata.redUrl}
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              {/* 2. Sección: Descripción del recurso educativo digital */}
+              <div className="wix-eval-section-block">
+                <div className="wix-eval-green-banner">• Descripción del recurso educativo digital</div>
+                <div className="wix-eval-block-body">
+                  <p>{modelItem.redDescription}</p>
+                </div>
+              </div>
+
+              {/* 3. Sección: Modelo de evaluación */}
+              <div className="wix-eval-section-block">
+                <div className="wix-eval-green-banner">• Modelo de evaluación</div>
+                <div className="wix-eval-block-body">
+                  <p><strong>{modelItem.modelInfo.title}</strong></p>
+                  <p style={{ marginTop: '6px' }}><strong>Descripción del modelo:</strong></p>
+                  <p style={{ marginTop: '4px' }}>{modelItem.modelInfo.description}</p>
+                </div>
+              </div>
+
+              {/* 4. Sección: Criterios de evaluación del modelo */}
+              <div className="wix-eval-section-block">
+                <div className="wix-eval-green-banner">• Criterios de evaluación del modelo</div>
+                <div className="wix-eval-criteria-container">
+                  {modelItem.criteria.map((c) => (
+                    <React.Fragment key={c.num}>
+                      {c.dimensionHeader && (
+                        <div className="wix-dimension-header-banner">
+                          {c.dimensionHeader}
+                        </div>
+                      )}
+                      <table className="wix-criterion-card-table">
+                        <tbody>
+                          <tr>
+                            <td className="wix-criterion-text-cell">
+                              <strong>{c.num}. {c.title}{c.desc ? ':' : ''}</strong> {c.desc}
+                            </td>
+                            <td className="wix-criterion-score-cell">
+                              <table className="wix-score-matrix-table">
+                                <thead>
+                                  <tr>
+                                    <th colSpan="6" className="wix-score-matrix-top-header">Puntaje</th>
+                                  </tr>
+                                  <tr className="wix-score-matrix-cols">
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>N/A</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr className="wix-score-matrix-val-row">
+                                    <td>{c.score === 1 ? 'X' : ''}</td>
+                                    <td>{c.score === 2 ? 'X' : ''}</td>
+                                    <td>{c.score === 3 ? 'X' : ''}</td>
+                                    <td>{c.score === 4 ? 'X' : ''}</td>
+                                    <td>{c.score === 5 ? 'X' : ''}</td>
+                                    <td>{c.isNA ? 'X' : ''}</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          {c.notes && (
+                            <tr className="wix-criterion-notes-row">
+                              <td colSpan="2" className="wix-criterion-notes-cell">
+                                <strong>{c.notesLabel || 'Notas:'}</strong> {c.notes}
+                              </td>
+                            </tr>
+                          )}
+                        </tbody>
+                      </table>
+                    </React.Fragment>
+                  ))}
+                </div>
+              </div>
+
+              {/* 5. Sección: Resultados de la evaluación */}
+              <div className="wix-eval-section-block">
+                <div className="wix-eval-green-banner">• Resultados de la de evaluación</div>
+                <div className="wix-eval-block-body">
+                  <p className="wix-final-score-bold">
+                    <strong>{modelItem.results.totalScoreText}</strong>
+                  </p>
+                  <p style={{ marginTop: '8px' }}><strong>Conclusiones de la evaluación:</strong></p>
+                  {modelItem.results.conclusions.map((concl, cIdx) => (
+                    <p key={cIdx} style={{ marginTop: '8px' }}>{concl}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       )}
 
-      {/* PESTAÑA 2.2: RECURSOS EDUCATIVOS DIGITALES */}
+      {/* SUBPÁGINA 2.2: RECURSOS EDUCATIVOS DIGITALES */}
       {activeTab === 'resources' && (
         <div className="wix-tab-content">
           {/* Tablas de Caracterización de los RED Seleccionados */}

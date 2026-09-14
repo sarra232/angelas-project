@@ -99,6 +99,699 @@ export const portfolioData = {
 
     quote: "Lectura comparativa: LORI, COdA y UNE 71362 son especialmente apropiados para valorar RED y objetos de aprendizaje; Reeves aporta una mirada pedagógica profunda; FURPS permite examinar la calidad funcional y técnica; y Galvis integra calidad educativa, computacional y viabilidad mediante juicio de expertos y participación de usuarios.",
 
+    // SUBPÁGINA 2.1: MODELOS DE EVALUACIÓN (TABLAS DETALLADAS)
+    subpage21Models: [
+      {
+        id: "lori-1",
+        mainTitle: "Modelo de Evaluación",
+        modelName: "LORI",
+        metadata: {
+          redName: "Vocabulary Games, Daily Routine",
+          grade: "6°",
+          area: "Inglés",
+          objectives: "Aprender vocabulario relacionado con actividades de la vida cotidiana",
+          repositoryName: "LearnEnglish Teens",
+          redUrl: "https://learnenglishteens.britishcouncil.org/vocabulary/a1-a2-vocabulary/daily-routine"
+        },
+        redDescription: "Es un Recurso Educativo Digital diseñado para facilitar y hacer más llamativo el aprendizaje del inglés como segunda lengua. Contiene herramientas para practicar todas las habilidades del idioma, y además se puede interactuar con personas de todo el mundo.",
+        modelInfo: {
+          title: "Modelo: LORI",
+          description: "El modelo LORI, desarrollado por Nesbit y Leacock, se centra en la evaluación de objetos de aprendizaje digitales a partir de una perspectiva pedagógica, técnica y comunicativa. Este modelo proporciona un marco estructurado para revisar y valorar la calidad de un RED en entornos colaborativos, permitiendo mejorar su diseño instruccional. Se fundamenta en la revisión sistemática por expertos y usuarios finales, promoviendo una evaluación tanto cuantitativa como cualitativa."
+        },
+        criteria: [
+          {
+            num: 1,
+            title: "Calidad de los contenidos",
+            desc: "veracidad, exactitud presentación equilibrada de ideas, y nivel adecuado de detalle.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 2,
+            title: "Adecuación de los objetivos de aprendizaje",
+            desc: "coherencia entre los objetivos, actividades, evaluaciones y perfil del alumnado.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 3,
+            title: "Feedback (retroalimentación) y adaptabilidad",
+            desc: "contenido adaptativo o feedback dirigido en función de la respuesta de cada alumno/a y su estilo de aprendizaje.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 4,
+            title: "Motivación",
+            desc: "capacidad de motivar y generar interés en un grupo concreto de alumno/as.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 5,
+            title: "Diseño y presentación",
+            desc: "el diseño de la información audiovisual favorece el adecuado procesamiento de la información.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 6,
+            title: "Usabilidad",
+            desc: "facilidad de navegación, interfaz predictiva para el usuario y calidad de los recursos de ayuda de la interfaz.",
+            score: 4,
+            isNA: false
+          },
+          {
+            num: 7,
+            title: "Accesibilidad",
+            desc: "el diseño de los controles y la presentación de la información está adaptada para personas en condición de discapacidad y dispositivos móviles.",
+            score: 4,
+            isNA: false
+          },
+          {
+            num: 8,
+            title: "Reusabilidad",
+            desc: "capacidad para usarse en distintos escenarios de aprendizaje y con alumno/as de distintos bagajes.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 9,
+            title: "Cumplimiento de estándares",
+            desc: "adecuación a los estándares y especificaciones internacionales.",
+            score: 5,
+            isNA: false
+          }
+        ],
+        results: {
+          totalScoreText: "Puntuación final: 43/45 Puntos",
+          conclusions: [
+            "El recurso Vocabulary Games, Daily Routine presenta una valoración excelente según los criterios del modelo LORI. Su principal fortaleza está en la calidad y pertinencia de los contenidos, ya que las actividades están directamente relacionadas con el aprendizaje del vocabulario y se encuentran organizadas de acuerdo con los niveles A1 y A2. También sobresale por la variedad de ejercicios y por las posibilidades que ofrece para el aprendizaje autónomo.",
+            "La principal consideración corresponde a la usabilidad y a la necesidad de mediación docente. Debido a que LearnEnglish Teens contiene una gran cantidad de materiales, es conveniente que el docente seleccione previamente las actividades que se relacionen con los objetivos de aprendizaje de la clase. Esto coincide con la limitación identificada en el documento original, donde se señala que el recurso no constituye por sí mismo un curso completo con una secuencia obligatoria."
+          ]
+        }
+      },
+      {
+        id: "lori-2",
+        mainTitle: "MODELO DE EVALUACIÓN",
+        modelName: "LORI 2",
+        metadata: {
+          redName: "Irregular Plural Nouns",
+          grade: "6°",
+          area: "Inglés",
+          objectives: "Emplear recursos y contenidos multimedia y actividades interactivas para incentivar el aprendizaje de un segundo idioma.",
+          repositoryName: "PBS LearningMedia",
+          redUrl: "https://www.pbslearningmedia.org/resource/564f9dfd-dcb0-4f32-bfad-bcab1313ae37/irregular-plural-nouns-no-nonsense-grammar/?student=true"
+        },
+        redDescription: "Es un Recurso Educativo Digital que ofrece variedad en su contenido, tanto para estudiantes como para docentes. Sus herramientas son didácticas y llamativas.",
+        modelInfo: {
+          title: "Modelo: LORI",
+          description: "El modelo LORI, desarrollado por Nesbit y Leacock, se centra en la evaluación de objetos de aprendizaje digitales a partir de una perspectiva pedagógica, técnica y comunicativa. Este modelo proporciona un marco estructurado para revisar y valorar la calidad de un RED en entornos colaborativos, permitiendo mejorar su diseño instruccional. Se fundamenta en la revisión sistemática por expertos y usuarios finales, promoviendo una evaluación tanto cuantitativa como cualitativa."
+        },
+        criteria: [
+          {
+            num: 1,
+            title: "Calidad de los contenidos",
+            desc: "veracidad, exactitud presentación equilibrada de ideas, y nivel adecuado de detalle.",
+            score: 4,
+            isNA: false
+          },
+          {
+            num: 2,
+            title: "Adecuación de los objetivos de aprendizaje",
+            desc: "coherencia entre los objetivos, actividades, evaluaciones y perfil del alumnado.",
+            score: 4,
+            isNA: false
+          },
+          {
+            num: 3,
+            title: "Feedback (retroalimentación) y adaptabilidad",
+            desc: "contenido adaptativo o feedback dirigido en función de la respuesta de cada alumno/a y su estilo de aprendizaje.",
+            score: 4,
+            isNA: false
+          },
+          {
+            num: 4,
+            title: "Motivación",
+            desc: "capacidad de motivar y generar interés en un grupo concreto de alumno/as.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 5,
+            title: "Diseño y presentación",
+            desc: "el diseño de la información audiovisual favorece el adecuado procesamiento de la información.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 6,
+            title: "Usabilidad",
+            desc: "facilidad de navegación, interfaz predictiva para el usuario y calidad de los recursos de ayuda de la interfaz.",
+            score: 4,
+            isNA: false
+          },
+          {
+            num: 7,
+            title: "Accesibilidad",
+            desc: "el diseño de los controles y la presentación de la información está adaptada para personas en condición de discapacidad y dispositivos móviles.",
+            score: 3,
+            isNA: false
+          },
+          {
+            num: 8,
+            title: "Reusabilidad",
+            desc: "capacidad para usarse en distintos escenarios de aprendizaje y con alumno/as de distintos bagajes.",
+            score: 4,
+            isNA: false
+          },
+          {
+            num: 9,
+            title: "Cumplimiento de estándares",
+            desc: "adecuación a los estándares y especificaciones internacionales.",
+            score: 5,
+            isNA: false
+          }
+        ],
+        results: {
+          totalScoreText: "Puntuación final: 38/45 Puntos",
+          conclusions: [
+            "El recurso Irregular Plural Nouns presenta una valoración muy buena según el modelo LORI. Sus mayores fortalezas se encuentran en el diseño y presentación, la motivación y la posibilidad de reutilización. Los recursos multimedia y las actividades interactivas permiten complementar las estrategias tradicionales de enseñanza y pueden integrarse fácilmente en diferentes momentos de una clase.",
+            "Su principal aspecto por mejorar está relacionado con la contextualización y accesibilidad. Como se señala en el documento, PBS LearningMedia está orientado principalmente al contexto educativo estadounidense, por lo que el docente colombiano debe seleccionar los materiales cuidadosamente y establecer conexiones con la realidad de sus estudiantes."
+          ]
+        }
+      },
+      {
+        id: "coda-1",
+        mainTitle: "MODELO DE EVALUACIÓN",
+        modelName: "COdA 1",
+        metadata: {
+          redName: "Vocabulary Games, Daily Routine",
+          grade: "6°",
+          area: "Inglés",
+          objectives: "Fomentar el aprendizaje de vocabulario relacionado con actividades de la vida cotidiana",
+          repositoryName: "British Council LearnEnglish Teens",
+          redUrl: "https://learnenglishteens.britishcouncil.org/vocabulary/a1-a2-vocabulary/daily-routine"
+        },
+        redDescription: "Recurso educativo digital orientado al aprendizaje del inglés y específicamente al desarrollo de vocabulario relacionado con las actividades de la rutina diaria. De acuerdo con la información presentada en el documento, el recurso ofrece materiales organizados según diferentes niveles de competencia lingüística y permite trabajar las habilidades de reading, listening, writing y speaking. Además, incorpora videos, audios, textos y ejercicios interactivos.",
+        modelInfo: {
+          title: "Modelo: COdA",
+          description: "El modelo CODA se enfoca exclusivamente en la calidad de los objetivos de aprendizaje integrados en los RED. Evalúa la claridad, coherencia, pertinencia y alineación curricular de dichos objetivos, siendo útil para analizar su función dentro del diseño instruccional."
+        },
+        criteria: [
+          {
+            num: 1,
+            title: "Objetivos y coherencia didáctica",
+            desc: "",
+            notes: "El contenido se relaciona directamente con el aprendizaje del vocabulario sobre la rutina diaria y puede ser utilizado con estudiantes de sexto grado. Existe correspondencia entre el contenido y las actividades propuestas.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 2,
+            title: "Calidad de los contenidos",
+            desc: "",
+            notes: "Presenta contenidos específicos para el aprendizaje del inglés, organizados de acuerdo con niveles de competencia lingüística. La variedad de actividades permite abordar el vocabulario desde diferentes formas de interacción.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 3,
+            title: "Capacidad de generar reflexión, críticas e innovación",
+            desc: "",
+            notes: "El recurso favorece principalmente la práctica y consolidación del vocabulario. Aunque permite interactuar con los contenidos, las actividades descritas están más orientadas a ejercitación que a procesos complejos de reflexión, análisis o innovación.",
+            score: 3,
+            isNA: false
+          },
+          {
+            num: 4,
+            title: "Interactividad y adaptabilidad",
+            desc: "",
+            notes: "Cuenta con ejercicios interactivos, recursos audiovisuales y actividades que permiten la participación activa del estudiante. Además, la organización por niveles facilita seleccionar materiales de acuerdo con las necesidades de aprendizaje.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 5,
+            title: "Motivación",
+            desc: "",
+            notes: "El empleo de videos, audios, imágenes, textos y actividades interactivas hace que la práctica del inglés sea más dinámica. El contenido relacionado con las rutinas cotidianas también resulta cercano a los estudiantes.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 6,
+            title: "Formato y diseño",
+            desc: "",
+            notes: "Combina diferentes formatos de presentación, como texto, audio, video y actividades interactivas. Esta variedad favorece una presentación dinámica de los contenidos.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 7,
+            title: "Usabilidad",
+            desc: "",
+            notes: "El recurso puede ser utilizado de manera relativamente sencilla. Sin embargo, la gran cantidad de materiales disponibles en la plataforma hace necesaria la selección previa por parte del docente para orientar al estudiante hacia las actividades pertinentes.",
+            score: 4,
+            isNA: false
+          },
+          {
+            num: 8,
+            title: "Accesibilidad",
+            desc: "",
+            notes: "La variedad de formatos puede favorecer diferentes formas de acceso a la información. No obstante, la información disponible en el documento no permite comprobar completamente el cumplimiento de todos los criterios técnicos de accesibilidad para estudiantes con diferentes discapacidades.",
+            score: 4,
+            isNA: false
+          },
+          {
+            num: 9,
+            title: "Reusabilidad",
+            desc: "",
+            notes: "Puede utilizarse en diferentes momentos del proceso educativo: introducción de vocabulario, práctica, refuerzo, recuperación o trabajo autónomo. También puede incorporarse a diferentes secuencias didácticas.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 10,
+            title: "Interoperabilidad",
+            desc: "",
+            notes: "Al tratarse de un recurso alojado en una plataforma web, puede incorporarse a diferentes contextos educativos digitales. Sin embargo, el documento señala que algunas actividades requieren conexión estable a Internet y dispositivos disponibles, lo cual puede limitar su utilización en determinados contextos.",
+            score: 4,
+            isNA: false
+          }
+        ],
+        results: {
+          totalScoreText: "Puntuación final: 45/50 Puntos",
+          conclusions: [
+            "La aplicación del modelo COdA permite identificar que Vocabulary Games, Daily Routine presenta un alto nivel de calidad tanto en sus características didácticas como tecnológicas. Sus principales fortalezas están relacionadas con la calidad de los contenidos, la interactividad, la motivación, el diseño y la reusabilidad. La variedad de recursos permite que el docente utilice el RED de diferentes maneras dentro de una clase de inglés.",
+            "Para desarrollar procesos de mayor complejidad cognitiva sería conveniente complementarlo con preguntas, situaciones comunicativas, producción oral o escrita y actividades diseñadas por el docente."
+          ]
+        }
+      },
+      {
+        id: "coda-2",
+        mainTitle: "MODELO DE EVALUACIÓN",
+        modelName: "COdA 2",
+        metadata: {
+          redName: "Irregular Plural Nouns",
+          grade: "6°",
+          area: "Inglés",
+          objectives: "Fomentar e incentivar el aprendizaje de una segunda lengua",
+          repositoryName: "PBS LearningMedia",
+          redUrl: "https://www.pbslearningmedia.org/resource/564f9dfd-dcb0-4f32-bfad-bcab1313ae37/irregular-plural-nouns-no-nonsense-grammar/?student=true"
+        },
+        redDescription: "Es un recurso educativo digital orientado al aprendizaje del inglés, que ofrece contenidos para estudiantes y docentes mediante herramientas didácticas y llamativas. La plataforma dispone de recursos multimedia y actividades interactivas, además de materiales diferenciados por edades, grados y áreas de conocimiento.El recurso puede complementar una secuencia didáctica diseñada por el docente.",
+        modelInfo: {
+          title: "Modelo: COdA",
+          description: "El modelo CODA se enfoca exclusivamente en la calidad de los objetivos de aprendizaje integrados en los RED. Evalúa la claridad, coherencia, pertinencia y alineación curricular de dichos objetivos, siendo útil para analizar su función dentro del diseño instruccional."
+        },
+        criteria: [
+          {
+            num: 1,
+            title: "Objetivos y coherencia didáctica",
+            desc: "",
+            notes: "El recurso presenta coherencia con el aprendizaje de los plurales irregulares en inglés. Sin embargo, el docente debe establecer los objetivos específicos y la forma en que el recurso se integrará a la secuencia didáctica.",
+            score: 4,
+            isNA: false
+          },
+          {
+            num: 2,
+            title: "Calidad de los contenidos",
+            desc: "",
+            notes: "Los contenidos son pertinentes para el aprendizaje del inglés y se presentan mediante recursos educativos multimedia. No obstante, algunos elementos requieren contextualización para estudiantes colombianos debido al contexto educativo en el que fueron desarrollados.",
+            score: 4,
+            isNA: false
+          },
+          {
+            num: 3,
+            title: "Capacidad de generar reflexión, críticas e innovación",
+            desc: "",
+            notes: "El recurso permite comprender y practicar un contenido lingüístico específico, pero su propósito principal está relacionado con el aprendizaje de una estructura gramatical. Para desarrollar pensamiento crítico o innovación es necesario complementarlo con actividades diseñadas por el docente.",
+            score: 3,
+            isNA: false
+          },
+          {
+            num: 4,
+            title: "Interactividad y adaptabilidad",
+            desc: "",
+            notes: "Cuenta con actividades interactivas y recursos multimedia. Además, puede incorporarse a diferentes momentos de una secuencia didáctica. Sin embargo, no se dispone de evidencia suficiente para afirmar que el recurso se adapta de manera profunda a las necesidades individuales de cada estudiante.",
+            score: 4,
+            isNA: false
+          },
+          {
+            num: 5,
+            title: "Motivación",
+            desc: "",
+            notes: "Los recursos multimedia y las actividades interactivas hacen que la presentación del contenido sea más atractiva y dinámica para estudiantes de sexto grado.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 6,
+            title: "Formato y diseño",
+            desc: "",
+            notes: "La plataforma ofrece diferentes formatos y recursos multimedia, lo que permite presentar el contenido de una manera visual y dinámica.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 7,
+            title: "Usabilidad",
+            desc: "",
+            notes: "Puede utilizarse como complemento de una clase y permite acceder a diversos recursos. Sin embargo, la cantidad de materiales disponibles puede hacer que el proceso de búsqueda y selección requiera tiempo del docente.",
+            score: 4,
+            isNA: false
+          },
+          {
+            num: 8,
+            title: "Accesibilidad",
+            desc: "",
+            notes: "Aunque utiliza diferentes recursos multimedia, la información disponible en el documento no permite verificar completamente las características de accesibilidad para estudiantes con diferentes condiciones de discapacidad. Por esta razón se asigna una valoración aceptable.",
+            score: 3,
+            isNA: false
+          },
+          {
+            num: 9,
+            title: "Reusabilidad",
+            desc: "",
+            notes: "Puede emplearse como actividad inicial, explicación, práctica o complemento de una secuencia didáctica. También puede combinarse con preguntas, actividades de vocabulario y producción oral o escrita.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 10,
+            title: "Interoperabilidad",
+            desc: "",
+            notes: "Al estar disponible mediante una plataforma digital, ofrece posibilidades de uso en diferentes contextos. Sin embargo, el documento señala que determinados contenidos requieren una buena conexión a Internet y dispositivos capaces de reproducir videos y recursos interactivos.",
+            score: 4,
+            isNA: false
+          }
+        ],
+        results: {
+          totalScoreText: "Puntuación final: 41/50 Puntos",
+          conclusions: [
+            "La aplicación del modelo COdA permite identificar que es un RED de muy buena calidad para complementar la enseñanza del inglés. Sus mayores fortalezas se encuentran en la motivación, el formato y diseño y la reusabilidad. La utilización de recursos multimedia facilita que el docente pueda integrar el RED en diferentes momentos de una clase.",
+            "Una de sus principales oportunidades de mejora se relaciona con la accesibilidad, ya que con la información disponible no es posible comprobar completamente la adaptación del recurso para estudiantes con diferentes necesidades."
+          ]
+        }
+      },
+      {
+        id: "galvis-1",
+        mainTitle: "INSTRUMENTO DE EVALUACIÓN MODELO GALVIS (2000)",
+        subTitle: "UDES 2025",
+        modelName: "Modelo Galvis 1",
+        metadata: {
+          redName: "Vocabulary Games, Daily Routine",
+          grade: "6°",
+          area: "Inglés",
+          objectives: "Aprender y reforzar vocabulario relacionado con actividades de la vida cotidiana.",
+          repositoryName: "LearnEnglish Teens",
+          redUrl: "https://learnenglishteens.britishcouncil.org/vocabulary/a1-a2-vocabulary/daily-routine"
+        },
+        redDescription: "Recurso educativo digital orientado al aprendizaje del inglés y específicamente al desarrollo de vocabulario relacionado con las actividades de la rutina diaria. De acuerdo con la información presentada en el documento, el recurso ofrece materiales organizados según diferentes niveles de competencia lingüística y permite trabajar las habilidades de reading, listening, writing y speaking. Además, incorpora videos, audios, textos y ejercicios interactivos.",
+        modelInfo: {
+          title: "Modelo: Modelo Galvis (2000)",
+          description: "Este modelo, propuesto por Á. Galvis, busca valorar la calidad integral de los recursos digitales educativos dentro de su contexto sociocultural. Se enfoca en tres dimensiones: técnica, pedagógica y comunicativa. Propone una evaluación con enfoque formativo y contextual, lo que permite analizar cómo el RED responde a las necesidades reales del entorno escolar latinoamericano."
+        },
+        criteria: [
+          {
+            num: 1,
+            dimensionHeader: "Dimensión Pedagógica",
+            title: "Claridad y coherencia de los objetivos pedagógicos",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Los objetivos implícitos están bien alineados con el nivel A1-A2 del MCER y el desarrollo del vocabulario de rutinas diarias.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 2,
+            title: "Relación entre actividades, contenidos y evaluación",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Alta coherencia; las actividades de emparejamiento, completado y reordenamiento evalúan directamente el contenido presentado.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 3,
+            title: "Nivel de adecuación al perfil y nivel del estudiante",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Muy adecuado para estudiantes de grado 6° por su enfoque visual, auditivo y grado de dificultad A1-A2.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 4,
+            title: "Estímulo a la reflexión, pensamiento crítico y creatividad",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Las actividades son mayoritariamente de ejercitación, práctica mecánica y memorización de vocabulario.",
+            score: 3,
+            isNA: false
+          },
+          {
+            num: 5,
+            dimensionHeader: "Dimensión Tecnológica",
+            title: "Funcionalidad y estabilidad técnica",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "La plataforma del British Council ofrece excelente estabilidad y tiempo de respuesta.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 6,
+            title: "Compatibilidad con diferentes dispositivos y navegadores",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Funciona bien en diversos navegadores, aunque requiere conexión estable a Internet para audios e interactividad.",
+            score: 4,
+            isNA: false
+          },
+          {
+            num: 7,
+            title: "Calidad del diseño gráfico, multimedia y audiovisual",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Diseño limpio, atractivo, con imágenes claras, audio nítido y botones interactivos intuitivos.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 8,
+            dimensionHeader: "Dimensión Comunicativa",
+            title: "Claridad en el lenguaje, uso adecuado del vocabulario",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Lenguaje accesible, graduado y preciso para el nivel básico de inglés.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 9,
+            title: "Diseño comunicativo orientado al aprendizaje significativo",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Las situaciones de \"rutina diaria\" son cercanas al contexto cotidiano del estudiante, favoreciendo la apropiación.",
+            score: 4,
+            isNA: false
+          },
+          {
+            num: 10,
+            title: "Coherencia entre los medios utilizados y los objetivos de aprendizaje",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Integración efectiva de texto, imágenes y audio para reforzar el aprendizaje multimodal.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 11,
+            dimensionHeader: "Dimensión Organizativa",
+            title: "Facilidad de navegación y estructura del recurso",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Estructura intuitiva con menús desplegables claros",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 12,
+            title: "Accesibilidad y disponibilidad del recurso",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Es de libre acceso web, aunque requiere conectividad a Internet constante.",
+            score: 4,
+            isNA: false
+          },
+          {
+            num: 13,
+            title: "Posibilidad de uso autónomo y reutilización en otros contextos",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Permite el trabajo autónomo del estudiante y la descarga de material complementario en PDF",
+            score: 5,
+            isNA: false
+          }
+        ],
+        results: {
+          totalScoreText: "Puntuación final: 61/65 Puntos",
+          conclusions: [
+            "Es un recurso muy completo, accesible e intuitivo que facilita el aprendizaje autónomo de vocabulario en inglés, altamente adaptable al currículo de grado 6°."
+          ]
+        }
+      },
+      {
+        id: "galvis-2",
+        mainTitle: "INSTRUMENTO DE EVALUACIÓN MODELO GALVIS",
+        modelName: "Modelo Galvis 2",
+        metadata: {
+          redName: "Irregular Plural Nouns",
+          grade: "6°",
+          area: "Inglés",
+          objectives: "Comprender y aplicar las reglas gramaticales para la formación de sustantivos plurales irregulares en inglés mediante videos explicativos y actividades contextualizadas.",
+          repositoryName: "PBS LearningMedia",
+          redUrl: "https://www.pbslearningmedia.org/resource/564f9dfd-dcb0-4f32-bfad-bcab1313ae37/irregular-plural-nouns-no-nonsense-grammar/?student=true"
+        },
+        redDescription: "Es un recurso educativo basado en video interactivo y materiales didácticos diseñado por PBS. Se centra en la enseñanza gramatical (sustantivos plurales irregulares) a través de videos dinámicos y breves, complementados con sugerencias de actividades de comprensión y producción oral o escrita.",
+        modelInfo: {
+          title: "Modelo: Modelo Galvis (2000)",
+          description: "Este modelo, propuesto por Á. Galvis, busca valorar la calidad integral de los recursos digitales educativos dentro de su contexto sociocultural. Se enfoca en tres dimensiones: técnica, pedagógica y comunicativa. Propone una evaluación con enfoque formativo y contextual, lo que permite analizar cómo el RED responde a las necesidades reales del entorno escolar latinoamericano."
+        },
+        criteria: [
+          {
+            num: 1,
+            dimensionHeader: "Dimensión Pedagógica",
+            title: "Claridad y coherencia de los objetivos pedagógicos",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Definidos explícitamente en la ficha técnica y alineados con estándares educativos",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 2,
+            title: "Relación entre actividades, contenidos y evaluación",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Contextualiza bien el tema, pero requiere que el docente complemente con actividades de evaluación propia.",
+            score: 4,
+            isNA: false
+          },
+          {
+            num: 3,
+            title: "Nivel de adecuación al perfil y nivel del estudiante",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Adecuado para grado 6°, aunque puede requerir mediación del docente para adaptar referentes culturales.",
+            score: 4,
+            isNA: false
+          },
+          {
+            num: 4,
+            title: "Estímulo a la reflexión, pensamiento crítico y creatividad",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "El recurso se centra en la explicación gramatical puntual; la creatividad depende de cómo el docente extienda la actividad.",
+            score: 3,
+            isNA: false
+          },
+          {
+            num: 5,
+            dimensionHeader: "Dimensión Tecnológica",
+            title: "Funcionalidad y estabilidad técnica",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Excelente funcionamiento de los controles del reproductor.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 6,
+            title: "Compatibilidad con diferentes dispositivos y navegadores",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Alta compatibilidad en la plataforma web, pero dependiente de un ancho de banda estable para la reproducción de video en HD.",
+            score: 4,
+            isNA: false
+          },
+          {
+            num: 7,
+            title: "Calidad del diseño gráfico, multimedia y audiovisual",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Excelente calidad de producción audiovisual, edición dinámica e imágenes atractivas para los estudiantes.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 8,
+            dimensionHeader: "Dimensión Comunicativa",
+            title: "Claridad en el lenguaje, uso adecuado del vocabulario",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Lenguaje claro, nativo y bien articulado en el video, con explicaciones explícitas.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 9,
+            title: "Diseño comunicativo orientado al aprendizaje significativo",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "El uso de situaciones cotidianas en video facilita la comprensión, aunque algunos referentes son muy anglosajones.",
+            score: 4,
+            isNA: false
+          },
+          {
+            num: 10,
+            title: "Coherencia entre los medios utilizados y los objetivos de aprendizaje",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "El recurso audiovisual resulta idóneo para ilustrar ejemplos concretos de la regla gramatical.",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 11,
+            dimensionHeader: "Dimensión Organizativa",
+            title: "Facilidad de navegación y estructura del recurso",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Estructura intuitiva con menús desplegables claros",
+            score: 5,
+            isNA: false
+          },
+          {
+            num: 12,
+            title: "Accesibilidad y disponibilidad del recurso",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Acceso gratuito en línea; requiere conexión constante y puede presentar restricciones menores en algunos países.",
+            score: 4,
+            isNA: false
+          },
+          {
+            num: 13,
+            title: "Posibilidad de uso autónomo y reutilización en otros contextos",
+            desc: "",
+            notesLabel: "Observaciones:",
+            notes: "Sirve como excelente complemento dentro de una secuencia didáctica, pero no reemplaza la guía docente para la evaluación",
+            score: 4,
+            isNA: false
+          }
+        ],
+        results: {
+          totalScoreText: "Puntuación final: 57/65 Puntos",
+          conclusions: [
+            "Es un recurso dinámico y de altísima calidad audiovisual. Su principal fortaleza radica en la dinamización de conceptos gramaticales, aunque requiere una mediación pedagógica previa para contextualizarlo al entorno colombiano y diseñar las actividades de cierre."
+          ]
+        }
+      }
+    ],
+
     // SUBPÁGINA 2.2: RECURSOS EDUCATIVOS DIGITALES
     resourcesSection: {
       pill: "Recursos educativos digitales",

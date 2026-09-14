@@ -66,11 +66,14 @@ export default function Home({ onNavigate }) {
         </div>
       </div>
 
-      {/* Botón de acceso directo a la siguiente sección */}
+      {/* Botón de acceso directo a la siguiente sección (sin redirección activa) */}
       <div className="wix-home-cta-box">
         <button 
           className="wix-btn-start"
-          onClick={() => onNavigate('models')}
+          onClick={(e) => {
+            e.preventDefault();
+          }}
+          type="button"
         >
           Comenzar Revisión: Modelos de Evaluación y RED →
         </button>

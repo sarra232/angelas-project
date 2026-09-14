@@ -674,6 +674,184 @@ a:hover {
 }
 
 /* ==========================================================================
+   9.2 Tablas Detalladas de Modelos de Evaluación (Subpágina 2.1)
+   ========================================================================== */
+.wix-detailed-eval-container {
+  margin: 20px 0 35px;
+}
+
+.wix-eval-main-heading {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.wix-eval-main-heading h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000000;
+  margin: 0 0 2px;
+}
+
+.wix-eval-main-heading h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000000;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Tabla de Metadatos Azul */
+.wix-eval-table-wrapper {
+  margin-bottom: 16px;
+}
+
+.wix-meta-table-eval {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, 'Segoe UI', Tahoma, sans-serif;
+  border: 1px solid #000000;
+}
+
+.wix-meta-blue-label {
+  background: #99c2ec;
+  color: #000000;
+  font-weight: bold;
+  padding: 8px 12px;
+  width: 30%;
+  min-width: 180px;
+  border: 1px solid #000000;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.wix-meta-white-val {
+  background: #ffffff;
+  color: #000000;
+  padding: 8px 14px;
+  border: 1px solid #000000;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Bloques de Sección Verde */
+.wix-eval-section-block {
+  margin-bottom: 16px;
+  border: 1px solid #000000;
+  background: #ffffff;
+}
+
+.wix-eval-green-banner {
+  background: #c5e0b4;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  padding: 7px 12px;
+  font-size: 13.5px;
+  border-bottom: 1px solid #000000;
+}
+
+.wix-eval-block-body {
+  padding: 14px 18px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #000000;
+}
+
+.wix-final-score-bold {
+  font-size: 14px;
+  color: #000000;
+}
+
+/* Rejilla de Criterios de Evaluación */
+.wix-eval-criteria-container {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wix-criterion-card-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #000000;
+  background: #ffffff;
+}
+
+.wix-criterion-text-cell {
+  padding: 10px 14px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #000000;
+  border: 1px solid #000000;
+  vertical-align: middle;
+  width: 68%;
+}
+
+.wix-criterion-score-cell {
+  padding: 0;
+  border: 1px solid #000000;
+  vertical-align: middle;
+  width: 32%;
+}
+
+.wix-score-matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.wix-score-matrix-top-header {
+  background: #c5e0b4;
+  color: #000000;
+  font-weight: bold;
+  padding: 4px 6px;
+  font-size: 12px;
+  border-bottom: 1px solid #000000;
+}
+
+.wix-score-matrix-cols th {
+  background: #c5e0b4;
+  color: #000000;
+  font-weight: bold;
+  padding: 4px 2px;
+  font-size: 11.5px;
+  border: 1px solid #000000;
+  width: 16.66%;
+}
+
+.wix-score-matrix-val-row td {
+  padding: 8px 2px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #000000;
+  border: 1px solid #000000;
+  height: 28px;
+}
+
+.wix-criterion-notes-cell {
+  padding: 8px 14px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #000000;
+  border: 1px solid #000000;
+  border-top: none;
+  background: #ffffff;
+}
+
+.wix-dimension-header-banner {
+  background: #dbeafe;
+  color: #1e3a8a;
+  font-weight: bold;
+  font-size: 13.5px;
+  padding: 7px 14px;
+  border: 1px solid #1e3a8a;
+  margin-top: 10px;
+  margin-bottom: -4px;
+  letter-spacing: 0.3px;
+}
+
+
+/* ==========================================================================
    10. Línea de Tiempo (Rediseño)
    ========================================================================== */
 .wix-timeline {

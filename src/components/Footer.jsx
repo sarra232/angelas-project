@@ -41,12 +41,12 @@ export default function Footer() {
       {/* Franja Inferior Separada con Licencia */}
       <div className="wix-footer-bottom">
         <div className="wix-footer-bottom-inner">
-          <p className="wix-footer-cc-text">
-            © 2026     Licencia Creative Commons  Atribución-NoComercial 4.0 Internacional      (CC BY-NC 4.0)
-            <p className="wix-footer-sede-text">
-              · Manizales, Colombia
-            </p>
-          </p>
+          <div className="wix-footer-cc-text">
+            © 2026 Licencia Creative Commons Atribución-NoComercial 4.0 Internacional (CC BY-NC 4.0)
+          </div>
+          <div className="wix-footer-sede-text">
+            · Manizales, Colombia
+          </div>
         </div>
       </div>
     </footer>
