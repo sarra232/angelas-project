@@ -246,37 +246,47 @@ a:hover {
   margin: 0 auto 22px 18px;
 }
 
-/* Envoltorio con desfase suave hacia la izquierda para la tabla de datos */
+/* Envoltorio para la tabla de datos institucionales (tamaño ampliado) */
 .wix-table-wrapper-offset {
-  margin: 16px auto 10px 18px;
+  margin: 20px auto 14px 18px;
   width: calc(100% - 30px);
-  max-width: 650px;
+  max-width: 760px;
 }
 
 .wix-meta-table {
   width: 100%;
   border-collapse: collapse;
   background: #ffffff;
-  border: 1px solid var(--wix-border);
+  border: 2px solid var(--wix-border);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   text-align: left;
 }
 
 .wix-meta-table th {
   background: #edf2f7;
   color: var(--wix-navy);
-  padding: 8px 12px;
-  width: 32%;
-  font-size: 12.5px;
+  padding: 12px 16px;
+  width: 28%;
+  font-size: 14.5px;
   border: 1px solid var(--wix-border);
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  vertical-align: middle;
 }
 
 .wix-meta-table td {
-  padding: 8px 12px;
-  font-size: 13px;
+  padding: 12px 18px;
+  font-size: 15.5px;
   color: var(--wix-text);
   border: 1px solid var(--wix-border);
+  line-height: 1.6;
+}
+
+.wix-meta-table td strong {
+  font-size: 15.5px;
+  color: var(--wix-navy);
+  font-weight: 700;
 }
 
 .wix-home-cta-box {
@@ -338,13 +348,186 @@ a:hover {
 }
 
 /* ==========================================================================
+   6.1 Sección Plegable de Modelos Teóricos
+   ========================================================================== */
+.wix-models-collapsible-section {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid var(--wix-teal);
+  border-radius: 4px;
+  padding: 10px 14px 8px 14px;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.wix-models-section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.wix-models-section-title-wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+
+.wix-models-section-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--wix-navy);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.wix-models-badge-count {
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.wix-models-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1px solid var(--wix-teal);
+  color: var(--wix-teal);
+  padding: 4px 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.wix-models-toggle-btn:hover {
+  background: var(--wix-teal);
+  color: #ffffff;
+}
+
+.wix-models-toggle-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  padding-top: 4px;
+}
+
+.wix-models-toggle-footer-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px dashed #0f766e;
+  color: #0f766e;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.wix-models-toggle-footer-btn:hover {
+  background: #f0fdfa;
+  border-color: #0d9488;
+  color: #115e59;
+  box-shadow: 0 1px 3px rgba(15, 118, 110, 0.15);
+}
+
+/* Vista Previa Compacta de Tarjetas */
+.wix-grid-preview {
+  margin: 6px 0 6px 0;
+  gap: 12px;
+}
+
+.wix-card-preview-mode {
+  padding: 9px 12px;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid var(--wix-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.wix-card-preview-mode:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(26, 107, 104, 0.15);
+  border-color: var(--wix-teal);
+}
+
+.wix-card-head-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 4px;
+}
+
+.wix-card-preview-mode .wix-card-pill {
+  margin-bottom: 2px;
+  font-size: 9.5px;
+  padding: 1px 5px;
+  align-self: flex-start;
+}
+
+.wix-card-preview-mode .wix-card-title {
+  font-size: 0.92rem;
+  margin-bottom: 4px;
+  line-height: 1.25;
+}
+
+.wix-card-desc-clamp {
+  font-size: 11.8px !important;
+  line-height: 1.35 !important;
+  color: #475569 !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px !important;
+}
+
+.wix-card-click-hint {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--wix-teal);
+  text-align: right;
+  margin-top: 4px;
+  opacity: 0.85;
+}
+
+.wix-card-preview-mode:hover .wix-card-click-hint {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.wix-card-more-details {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px dashed #e2e8f0;
+}
+
+/* ==========================================================================
    7. Rejilla y Tarjetas (Con variaciones manuales de borde y desfase suave)
    ========================================================================== */
 .wix-grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  margin: 16px 0;
+  margin: 8px 0;
   align-items: start;
 }
 

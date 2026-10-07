@@ -4,6 +4,11 @@ import { portfolioData } from '../data/portfolioData';
 export default function ModelsOverview() {
   const { modelsPage } = portfolioData;
   const [activeTab, setActiveTab] = useState('evaluation-models'); // 'evaluation-models' (2.1), 'resources' (2.2)
+  const [isModelsExpanded, setIsModelsExpanded] = useState(false);
+
+  const displayedModels = isModelsExpanded 
+    ? modelsPage.models 
+    : modelsPage.models.slice(0, 3);
 
   return (
     <div className="wix-page-section">
@@ -13,20 +18,75 @@ export default function ModelsOverview() {
         <h2 className="wix-section-title">{modelsPage.title}</h2>
       </div>
 
-      {/* Modelos del 1 al 6 en Página 2 (encima de las subpáginas) */}
-      <div className="wix-models-overview-main" style={{ marginBottom: '28px' }}>
-        <div className="wix-grid-3">
-          {modelsPage.models.map((model, idx) => (
-            <div key={model.id} className={`wix-card wix-card-col-${(idx % 6) + 1}`}>
-              <span className="wix-card-pill">{model.pill}</span>
-              <h3 className="wix-card-title">{model.name}</h3>
-              <p><strong>Descripción:</strong> {model.description}</p>
-              <p><strong>Criterios:</strong> {model.criterios}</p>
-              <p><strong>Métrica:</strong> {model.metrica}</p>
-              <p><strong>Metodología:</strong> {model.metodologia}</p>
-              <p><strong>Instrumento:</strong> {model.instrumento}</p>
+      {/* Sección Plegable / Expandible de Modelos Teóricos (1 al 6) */}
+      <div className="wix-models-collapsible-section">
+        <div className="wix-models-section-top">
+          <div className="wix-models-section-title-wrap">
+            <h3 className="wix-models-section-title">
+              📚 Modelos Teóricos de Evaluación
+            </h3>
+            <span className="wix-models-badge-count">
+              {isModelsExpanded ? 'Mostrando 6 de 6 modelos' : 'Vista previa: 3 de 6 modelos'}
+            </span>
+          </div>
+          <button 
+            type="button"
+            className="wix-models-toggle-btn"
+            onClick={() => setIsModelsExpanded(!isModelsExpanded)}
+            title={isModelsExpanded ? "Contraer cuadros de modelos" : "Expandir todos los cuadros de modelos"}
+          >
+            {isModelsExpanded ? '▲ Contraer modelos' : '▼ Expandir todos (6)'}
+          </button>
+        </div>
+
+        <div className={`wix-grid-3 ${!isModelsExpanded ? 'wix-grid-preview' : 'wix-grid-expanded'}`}>
+          {displayedModels.map((model, idx) => (
+            <div 
+              key={model.id} 
+              className={`wix-card wix-card-col-${(idx % 6) + 1} ${!isModelsExpanded ? 'wix-card-preview-mode' : 'wix-card-full-mode'}`}
+              onClick={!isModelsExpanded ? () => setIsModelsExpanded(true) : undefined}
+              style={{ cursor: !isModelsExpanded ? 'pointer' : 'default' }}
+              title={!isModelsExpanded ? "Clic para expandir y ver todos los detalles" : undefined}
+            >
+              <div className="wix-card-head-compact">
+                <span className="wix-card-pill">{model.pill}</span>
+                <h3 className="wix-card-title">{model.name}</h3>
+              </div>
+              <p className={!isModelsExpanded ? "wix-card-desc-clamp" : ""}>
+                <strong>Descripción:</strong> {model.description}
+              </p>
+
+              {/* Solo se muestran estos 4 campos cuando está expandido */}
+              {isModelsExpanded && (
+                <div className="wix-card-more-details">
+                  <p><strong>Criterios:</strong> {model.criterios}</p>
+                  <p><strong>Métrica:</strong> {model.metrica}</p>
+                  <p><strong>Metodología:</strong> {model.metodologia}</p>
+                  <p><strong>Instrumento:</strong> {model.instrumento}</p>
+                </div>
+              )}
+
+              {!isModelsExpanded && (
+                <div className="wix-card-click-hint">
+                  <span>Clic para ver detalles completos →</span>
+                </div>
+              )}
             </div>
           ))}
+        </div>
+
+        <div className="wix-models-toggle-footer">
+          <button 
+            type="button"
+            className="wix-models-toggle-footer-btn"
+            onClick={() => setIsModelsExpanded(!isModelsExpanded)}
+          >
+            {isModelsExpanded ? (
+              <span>▲ Contraer vista (mostrar solo vista previa de 3 modelos)</span>
+            ) : (
+              <span>▼ Expandir y ver los 6 modelos completos con criterios, métrica e instrumentos</span>
+            )}
+          </button>
         </div>
       </div>
 

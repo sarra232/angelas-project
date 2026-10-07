@@ -49,18 +49,6 @@ export default function Home({ onNavigate }) {
                 <th>Institución:</th>
                 <td>{cover.university} — {cover.campus}</td>
               </tr>
-              <tr>
-                <th>Programa:</th>
-                <td>{cover.program}</td>
-              </tr>
-              <tr>
-                <th>Módulo:</th>
-                <td>{cover.module}</td>
-              </tr>
-              <tr>
-                <th>Año:</th>
-                <td>2026</td>
-              </tr>
             </tbody>
           </table>
         </div>
