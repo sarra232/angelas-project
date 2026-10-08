@@ -859,28 +859,249 @@ a:hover {
 /* ==========================================================================
    9.2 Tablas Detalladas de Modelos de Evaluación (Subpágina 2.1)
    ========================================================================== */
-.wix-detailed-eval-container {
-  margin: 20px 0 35px;
+/* 9.2 Barra de Herramientas y Filtros (Subpágina 2.1) */
+.wix-eval-collapsible-banner {
+  user-select: none;
+  transition: background-color 0.15s ease;
 }
 
-.wix-eval-main-heading {
-  text-align: center;
+.wix-eval-collapsible-banner:hover {
+  background: #b2d69e !important;
+}
+
+.wix-eval-banner-toggle-tag {
+  background: rgba(0, 0, 0, 0.08);
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.wix-eval-toolbar {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 10px 14px;
   margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 16px;
 }
 
-.wix-eval-main-heading h4 {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #000000;
-  margin: 0 0 2px;
+.wix-eval-toolbar-left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 14px;
 }
 
-.wix-eval-main-heading h3 {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #000000;
+.wix-eval-toolbar-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--wix-navy);
+}
+
+.wix-eval-filter-group {
+  display: flex;
+  gap: 4px;
+  background: #e2e8f0;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.wix-eval-filter-btn {
+  background: transparent;
+  border: none;
+  padding: 4px 10px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #475569;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.wix-eval-filter-btn:hover {
+  color: #0f172a;
+}
+
+.wix-eval-filter-btn.active {
+  background: #ffffff;
+  color: var(--wix-navy);
+  font-weight: 700;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.wix-eval-toolbar-right {
+  display: flex;
+  gap: 6px;
+}
+
+.wix-eval-action-btn {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #334155;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.wix-eval-action-btn:hover {
+  background: #edf2f7;
+  border-color: #94a3b8;
+  color: var(--wix-navy);
+}
+
+/* 9.3 Contenedor Acordeón de Cada Evaluación */
+.wix-eval-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wix-detailed-eval-container {
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  background: #ffffff;
+}
+
+.wix-detailed-eval-container.is-collapsed {
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.wix-detailed-eval-container.is-collapsed:hover {
+  border-color: var(--wix-blue);
+  box-shadow: 0 2px 6px rgba(30, 92, 138, 0.1);
+}
+
+.wix-detailed-eval-container.is-expanded {
+  border: 2px solid var(--wix-blue);
+  box-shadow: 0 4px 14px rgba(30, 92, 138, 0.1);
+  margin-bottom: 8px;
+}
+
+.wix-eval-accordion-header {
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s ease;
+}
+
+.wix-detailed-eval-container.is-collapsed .wix-eval-accordion-header {
+  background: #f8fafc;
+}
+
+.wix-detailed-eval-container.is-collapsed .wix-eval-accordion-header:hover {
+  background: #f1f5f9;
+}
+
+.wix-detailed-eval-container.is-expanded .wix-eval-accordion-header {
+  background: var(--wix-blue);
+  color: #ffffff;
+}
+
+.wix-eval-acc-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.wix-eval-acc-pill {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.wix-detailed-eval-container.is-expanded .wix-eval-acc-pill {
+  background: #ffffff;
+  color: var(--wix-blue);
+}
+
+.wix-eval-acc-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.wix-eval-acc-title {
   margin: 0;
-  letter-spacing: 0.5px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--wix-navy);
+}
+
+.wix-detailed-eval-container.is-expanded .wix-eval-acc-title {
+  color: #ffffff;
+}
+
+.wix-eval-acc-subtitle {
+  font-size: 12px;
+  color: #475569;
+}
+
+.wix-detailed-eval-container.is-expanded .wix-eval-acc-subtitle {
+  color: #e0e7ff;
+}
+
+.wix-eval-acc-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.wix-eval-acc-score {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 12px;
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.wix-detailed-eval-container.is-expanded .wix-eval-acc-score {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.wix-eval-acc-toggle-btn {
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 3px;
+  background: #ffffff;
+  color: var(--wix-blue);
+  border: 1px solid #cbd5e1;
+}
+
+.wix-detailed-eval-container.is-expanded .wix-eval-acc-toggle-btn {
+  background: #ffffff;
+  color: var(--wix-navy);
+  border-color: #ffffff;
+}
+
+.wix-eval-accordion-body {
+  padding: 16px 16px 8px 16px;
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
 }
 
 /* Tabla de Metadatos Azul */
