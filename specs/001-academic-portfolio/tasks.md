@@ -31,3 +31,8 @@
 ## Phase 5: GitHub Actions & Pages Deployment
 - [x] **TASK-16**: Create `.github/workflows/deploy.yml` for automated GitHub Pages static deployment on push.
 - [x] **TASK-17**: Verify local build (`npm run build`) and Docker container execution (`docker compose up` -> `http://localhost:8085`).
+
+## Phase 6: Institutional Assets & Formats (UDES Evaluation Model Application)
+- [x] **TASK-18**: Integrate official PPTX presentation (`PERT - RED.pptx`) with interactive 12-slide player and direct download.
+- [x] **TASK-19**: Integrate full academic document (`Formato rediseño modelo de evaluación.docx`) with expandable/collapsible toggle viewer and source download.
+- [x] **TASK-20**: Configure persistent Spec Kit discovery (`AGENTS.md`, `GEMINI.md`, and workspace root junctions) so every session automatically enforces Spec Kit.

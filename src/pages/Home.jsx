@@ -60,6 +60,7 @@ export default function Home({ onNavigate }) {
           className="wix-btn-start"
           onClick={(e) => {
             e.preventDefault();
+            if (onNavigate) onNavigate('models');
           }}
           type="button"
         >

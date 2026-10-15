@@ -216,7 +216,7 @@ export default function ModelsOverview() {
               <div className="wix-eval-section-block">
                 <div className="wix-eval-green-banner">• Descripción del recurso educativo digital</div>
                 <div className="wix-eval-block-body">
-                  <p>{modelItem.redDescription}</p>
+                  <p style={{ whiteSpace: 'pre-line' }}>{modelItem.redDescription}</p>
                 </div>
               </div>
 
