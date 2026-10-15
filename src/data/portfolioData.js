@@ -1556,16 +1556,16 @@ export const portfolioData = {
         instrumentoRedisenado: {
           intro: "El instrumento PERT-RED reúne los ocho criterios, la escala de valoración y un espacio para registrar evidencias y proponer mejoras. Su finalidad es que la evaluación sea clara, justificable y útil para la toma de decisiones.",
           tablaResumen: [
-            { criterio: "1. Pertinencia pedagógica y curricular", bc: "—", read: "4" },
+            { criterio: "1. Pertinencia pedagógica y curricular", bc: "5", read: "4" },
             { criterio: "2. Calidad y claridad de los contenidos", bc: "5", read: "4" },
-            { criterio: "3. Usabilidad e interactividad", bc: "—", read: "3" },
-            { criterio: "4. Accesibilidad e inclusión", bc: "—", read: "3" },
-            { criterio: "5. Viabilidad tecnológica y conectividad", bc: "—", read: "4" },
-            { criterio: "6. Motivación y contextualización", bc: "—", read: "3" },
-            { criterio: "7. Evaluación y retroalimentación", bc: "—", read: "2" },
-            { criterio: "8. Flexibilidad y reutilización", bc: "—", read: "5" },
-            { criterio: "TOTAL (Promedio)", bc: "3.8", read: "3.5" },
-            { criterio: "NIVEL DE CALIDAD", bc: "Bueno", read: "Bueno" }
+            { criterio: "3. Usabilidad e interactividad", bc: "4", read: "3" },
+            { criterio: "4. Accesibilidad e inclusión", bc: "3", read: "3" },
+            { criterio: "5. Viabilidad tecnológica y conectividad", bc: "3", read: "4" },
+            { criterio: "6. Motivación y contextualización", bc: "4", read: "3" },
+            { criterio: "7. Evaluación y retroalimentación", bc: "4", read: "2" },
+            { criterio: "8. Flexibilidad y reutilización", bc: "3", read: "5" },
+            { criterio: "TOTAL", bc: "3.8", read: "3.5" },
+            { criterio: "NIVEL", bc: "Bueno", read: "Bueno" }
           ],
           ajustesModelo: [
             "A partir de su diseño y aplicación preliminar, se identifican dos acciones de mejoras:",
